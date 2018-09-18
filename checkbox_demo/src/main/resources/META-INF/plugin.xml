@@ -1,0 +1,15 @@
+<idea-plugin>
+    <id>com.intellij.sample.checkbox_demo</id>
+    <name>Checkbox Demo</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+    Plugin to demo checkboxes.<br>
+    ]]></description>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Checkboxes" secondary="true" icon="/checkbox_demo/plus.png" anchor="right"
+                    factoryClass="com.intellij.sample.checkbox_demo.CbdToolWindowFactory"/>
+    </extensions>
+
+</idea-plugin>
