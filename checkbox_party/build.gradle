@@ -3,7 +3,7 @@ plugins {
     id 'org.jetbrains.intellij' version '0.3.10'
 }
 
-group 'com.jetbrains.samples'
+group 'com.intellij.sample.checkbox_party'
 version '0.1'
 
 sourceCompatibility = 1.8
@@ -21,6 +21,5 @@ intellij {
 }
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+      First Edition</em>"""
 }

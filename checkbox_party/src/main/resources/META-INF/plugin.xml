@@ -1,11 +1,10 @@
 <idea-plugin>
-    <id>com.jetbrains.samples.checkbox_party</id>
-    <name>Plugin display name here</name>
+    <id>com.intellij.sample.checkbox_party</id>
+    <name>Checkbox Demo</name>
     <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
 
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    Plugin to demo checkboxes.<br>
     ]]></description>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
@@ -15,7 +14,9 @@
     -->
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <toolWindow id="Checkboxes" secondary="true" icon="/checkbox_party/plus.png" anchor="right"
+                    factoryClass="com.intellij.sample.checkbox_party.CbpToolWindowFactory"/>
+
     </extensions>
 
     <actions>
