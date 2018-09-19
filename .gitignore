@@ -27,7 +27,7 @@
 !/**/*.iml
 !/**/.idea/**/modules.xml
 !/**/.idea/modules/
-
+!/**/.idea/kotlinc.xml
 
 # Gradle
 /**/.idea/**/libraries/
