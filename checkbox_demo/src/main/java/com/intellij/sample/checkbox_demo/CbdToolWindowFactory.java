@@ -12,11 +12,14 @@ import java.awt.event.*;
 
 public class CbdToolWindowFactory implements ToolWindowFactory {
 
+  private JPanel CbdToolWindowContent;
+
   private JPanel bottomPanel;
   private JButton hideButton;
   private JButton refreshButton;
 
   private JPanel topPanel;
+  private JPanel errorStripeSubpanel;
   private JCheckBox addErrorStripeMarkersCb;
   private JCheckBox showActionsInToolbarCb;
 
@@ -33,7 +36,9 @@ public class CbdToolWindowFactory implements ToolWindowFactory {
   private JCheckBox useOriginalLineIndentCb;
   private JCheckBox showSoftWrapIndicatorCb;
 
-  private JPanel CbdToolWindowContent;
+  private JPanel showTipsSubpanel;
+  private JCheckBox showTipsCb;
+
   private ToolWindow CbdToolWindow;
 
 
@@ -48,6 +53,7 @@ public class CbdToolWindowFactory implements ToolWindowFactory {
     useSoftWrapsCb.addActionListener(new genericCheckboxListener());
     useOriginalLineIndentCb.addActionListener(new genericCheckboxListener());
     showSoftWrapIndicatorCb.addActionListener(new genericCheckboxListener());
+    showTipsCb.addActionListener(new genericCheckboxListener());
   }
 
   // Create the tool window content.
@@ -89,5 +95,6 @@ public class CbdToolWindowFactory implements ToolWindowFactory {
     useSoftWrapsCb.setSelected(false);
     useOriginalLineIndentCb.setSelected(false);
     showSoftWrapIndicatorCb.setSelected(false);
+    showTipsCb.setSelected(false);
   }
 }
