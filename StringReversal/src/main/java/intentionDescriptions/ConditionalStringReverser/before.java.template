@@ -1,0 +1,8 @@
+public class X {
+  void whosOnFirst() {
+    String Costello = <spot>"I want you to tell me the names of the fellows on the baseball team"</spot>;
+    String Abbott = <spot>"I'm telling you. Who's on first, What's on second, I Don't Know is on third--"</spot>;
+    System.out.println(Costello);
+    System.out.println(Abbott);
+  }
+}

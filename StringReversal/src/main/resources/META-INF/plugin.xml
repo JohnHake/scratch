@@ -1,0 +1,71 @@
+<!--
+  ~ Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+  -->
+
+<!--
+SDK code sample to show how intention action plugins are developed
+-->
+<idea-plugin url="http://www.jetbrains.com/idea">       <!-- Specifies the URL of the plugin homepage -->
+
+    <!-- Plugin name -->
+    <name>String Literal Reverser</name>
+
+    <!-- Unique identifier of the plugin. Cannot be changed between the plugin versions. -->
+    <id>com.jetbrains.sdk.StringReversal</id>
+
+    <!-- Description of the plugin. Displayed in the "Plugins" settings dialog and in the
+           plugin repository Web interface. -->
+    <description>Putting the cursor on a literal string gives the user an intention action to reverse the literal.</description>
+
+    <!-- Description of changes in the latest version of the plugin.  -->
+    <change-notes>----See build.gradle patchPluginXml-----</change-notes>
+
+    <!-- Plugin version, deferred in this case to gradle -->
+    <version>--See build.gradle patchPluginXml{}--</version>
+
+    <!-- The vendor of the plugin.
+           The optional "url" attribute specifies the URL of the vendor homepage.
+           The optional "email" attribute specifies the e-mail address of the vendor.
+    -->
+    <vendor url="http://www.jetbrains.com" email="support@jetbrains.com"/>
+
+    <!-- The unique identifiers of the plugins on which this plugin depends. -->
+    <depends>com.intellij.modules.java</depends>
+
+    <!-- Minimum and maximum build of IDEA compatible with the plugin.
+            In this case the values are overwritten by build.gradle.
+    -->
+    <idea-version since-build="2018.2.4"/>
+
+    <!-- Extensions which the plugin adds to extension points
+       defined by the IDEA core or by other plugins.
+       The "defaultExtensionNs " attribute must be set to the
+       ID of the plugin defining the extension point, or to
+       "com.intellij" if the extension point is defined by the
+       IDEA core.  -->
+    <extensions defaultExtensionNs="com.intellij">
+        <intentionAction>
+            <className>com.jetbrains.sdk.StringReversal.ConditionalStringReverser</className>
+            <category>Java/Strings</category>
+            <descriptionDirectoryName>ConditionalStringReverser</descriptionDirectoryName>
+        </intentionAction>
+    </extensions>
+
+    <!--
+    Declare the implementation class to be handled at the Project level.
+    -->
+    <project-components>
+        <component>
+            <implementation-class>com.jetbrains.sdk.StringReversal.ConditionalStringReverser</implementation-class>
+        </component>
+    </project-components>
+
+    <!--
+    The action section isn't necessary when developing a strictly intention action plugin.
+    But additional actions could be included in this plugin. They would be declared here.
+    -->
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>

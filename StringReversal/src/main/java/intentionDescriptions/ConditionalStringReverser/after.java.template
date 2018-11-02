@@ -1,0 +1,8 @@
+public class X {
+  void whosOnFirst() {
+    String Costello = "maet llabesab eht no swollef eht fo seman eht em llet ot uoy tnaw I";
+    String Abbott = "--driht no si wonK t'noD I ,dnoces no s'tahW ,tsrif no s'ohW .uoy gnillet m'I";
+    System.out.println(Costello);
+    System.out.println(Abbott);
+  }
+}
