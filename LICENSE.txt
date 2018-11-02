@@ -1,0 +1,3 @@
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+See license at https://github.com/JetBrains/intellij-sdk-docs/blob/master/LICENSE.txt

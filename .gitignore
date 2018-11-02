@@ -10,6 +10,9 @@
 
 # Generated files
 .idea/**/contentModel.xml
+/**/javadoc/
+/**/gen/
+/out
 
 # Sensitive or high-churn files
 /**/.idea/**/dataSources/
@@ -50,9 +53,6 @@
 
 # File-based project format
 *.iws
-
-# IntelliJ
-out/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
