@@ -14,7 +14,7 @@ plugins {
     id 'idea'
     // JetBrains IDE plugin for building IDEA projects with Gradle
     // https://github.com/JetBrains/gradle-intellij-plugin/blob/master/README.md
-    id 'org.jetbrains.intellij' version '0.3.11'
+    id 'org.jetbrains.intellij' version '0.3.12'
 }
 apply plugin: 'java'
 apply plugin: 'idea'
@@ -36,7 +36,9 @@ dependencies {
 //  https://docs.gradle.org/current/userguide/writing_build_scripts.html#sec:standard_project_properties
 project.group 'com.jetbrains.sdk.StringReversal'
 project.version '0.2'
+project.buildDir = file("${projectDir}/build")
 
+// Just debug
 task printProperties {
     doLast {
         println project.projectDir
@@ -64,14 +66,14 @@ sourceSets {
         }
     }
     // No test content. Including the directories seems to stop the build
-    //    test {                          
-    //        java {
-    //            srcDirs 'src/test/java'
-    //        }
-    //        resources {
-    //            srcDirs 'src/test/resources'
-    //        }
-    //    }
+    test {
+        java {
+            srcDirs 'src/test/java'
+        }
+        resources {
+            srcDirs 'src/test/resources'
+        }
+    }
 }
 
 
@@ -87,7 +89,7 @@ task makeJavaDoc(type: Javadoc) {
 
 // idea Task generates all IDEA configuration files
 idea {
-    // Enables fine-tuning module details - below is actually the default
+//    // Enables fine-tuning module details - below is actually the default
 //    module {
 //        sourceDirs
 //        resourceDirs
@@ -105,26 +107,26 @@ intellij {
     // The version of the IDEA distribution that should be used as a dependency
     // Maps to <idea-version since-build=""/> in plugin.xml
     // For a full list of IntelliJ IDEA releases please see https://www.jetbrains.com/intellij-repository/releases
-    // Commented out because intellij.version and intellij.localPath should not be specified at the same time.
-    // version 'IC-2018.2.4'
+     version 'IC-2018.2.4'
 
     // The path to locally installed IDEA distribution that should be used as a dependency. 
     // note the IntelliJ version on this path must match format specified in patchPluginXML.sinceBuild
-    localPath = '/Applications/IntelliJ IDEA 2018.3 CE EAP.app'
+    // Commented out because intellij.version and intellij.localPath should not be specified at the same time.
+//    localPath = '/Applications/IntelliJ-IDEA-2018.3-CE-EAP.app'
     
     // Patch plugin.xml with since and until build values
     // patchPluginXml.sinceBuild and patchPluginXml.untilBuild will be used (or their default values if none set).
-//    updateSinceUntilBuild = 'true'
+    updateSinceUntilBuild = 'true'
 
     // The user-defined value from patchPluginXml.sinceBuild 
     // (or its default value) will be used as a since, and an "open" until value.
-//    sameSinceUntilBuild = 'false'
+    sameSinceUntilBuild = 'false'
     
     // Do not download sources while initializing Gradle build
-//    downloadSources = 'false'
+    downloadSources = 'false'
     
     // Define custom sandbox name
-//    sandboxDirectory = "$project.buildDir/sr_sandbox"
+    sandboxDirectory = file("${project.buildDir}/sr-sandbox")
     
 }
 
@@ -139,7 +141,7 @@ patchPluginXml {
     // The collection of plugin.xml files to patch (in this case just 1)
     pluginXmlFiles = ['plugin.xml']         
     // the directory to store patched xml files
-//    destinationDir = "$project.buildDir/sr-patchedPluginXmlFiles"
+    destinationDir = file("${project.buildDir}/sr-patchedPluginXmlFiles")
 }
 
 
