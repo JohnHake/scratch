@@ -1,7 +1,7 @@
 ///////////////// Generic Gradle Stuff ///////////////////
 
 buildscript {
-    
+
 }
 
 plugins {
@@ -36,26 +36,16 @@ dependencies {
 //  https://docs.gradle.org/current/userguide/writing_build_scripts.html#sec:standard_project_properties
 project.group 'com.jetbrains.sdk.StringReversal'
 project.version '0.2'
-project.buildDir = file("${projectDir}/build")
+project.buildDir = file("${project.projectDir}/build")
 
-// Just debug
-task printProperties {
-    doLast {
-        println project.projectDir
-        println project.buildDir
-        println project.group
-        println project.version
-        println sourceSets.main.allSource.srcDirs
-        println sourceSets.test.allSource.srcDirs
-        println intellij.sandboxDirectory
-        println patchPluginXml.destinationDir
-    }
-}
 
 ////////////////////////// Gradle Core Java Plugin Stuff ///////////////////////
 
-// For default Java plugin project layout (directory structure): https://docs.gradle.org/current/userguide/java_plugin.html#sec:java_project_layout
 // Custom project layout for this plugin (just for documentation, layout is actually default.)
+// https://docs.gradle.org/current/userguide/building_java_projects.html#sec:custom_java_source_set_paths
+// Notes on syntax:
+// srcDir 'some/dir/path' is additive to existing source set
+// srcDirs = ['some/dir/path'] replaces default source set with only this set
 sourceSets {
     main {
         java {
@@ -65,13 +55,12 @@ sourceSets {
             srcDir 'src/main/resources/'
         }
     }
-    // No test content. Including the directories seems to stop the build
     test {
         java {
-            srcDirs 'src/test/java'
+            srcDir 'src/test/java'
         }
         resources {
-            srcDirs 'src/test/resources'
+            srcDir 'src/test/resources'
         }
     }
 }
@@ -80,7 +69,9 @@ sourceSets {
 // Build the java docs into the correct output directory
 // https://docs.gradle.org/current/dsl/org.gradle.api.tasks.javadoc.Javadoc.html
 task makeJavaDoc(type: Javadoc) {
-    source = sourceSets.main.allJava
+    source = sourceSets.main.java.srcDirs
+    exclude '**/intentionDescriptions/*'
+    classpath = sourceSets.main.compileClasspath
     destinationDir = project.file('docs/javadoc')
 }
 
@@ -89,11 +80,7 @@ task makeJavaDoc(type: Javadoc) {
 
 // idea Task generates all IDEA configuration files
 idea {
-//    // Enables fine-tuning module details - below is actually the default
-//    module {
-//        sourceDirs
-//        resourceDirs
-//    }
+
 }
 
 
@@ -138,10 +125,27 @@ patchPluginXml {
     pluginDescription = 'Putting the cursor in a string literal gives users the option to reverse the string content'
     // <change-notes> tag value
     changeNotes = '0.1 Under development. 0.2 Convert to gradle project.'       
-    // The collection of plugin.xml files to patch (in this case just 1)
-    pluginXmlFiles = ['plugin.xml']         
+    // The list of plugin.xml files to patch (in this case just 1)
+    // Note that full path is required for each plugin.xml file
+    pluginXmlFiles = ["${sourceSets.main.resources.asPath}"]
     // the directory to store patched xml files
     destinationDir = file("${project.buildDir}/sr-patchedPluginXmlFiles")
 }
 
+// Just debug
+task printProperties {
+    doLast {
+        println project.projectDir
+        println project.buildDir
+        println project.group
+        println project.version
+        println sourceSets.main.allSource.srcDirs
+        println sourceSets.test.allSource.srcDirs
+        println sourceSets.main.java.srcDirs
+        println makeJavaDoc.source.getAsPath()
+        println intellij.sandboxDirectory
+        println patchPluginXml.pluginXmlFiles.asPath
+        println patchPluginXml.destinationDir
+    }
+}
 
