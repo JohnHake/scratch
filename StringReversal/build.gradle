@@ -80,12 +80,14 @@ task makeJavaDoc(type: Javadoc) {
 
 // idea Task generates all IDEA configuration files
 idea {
-
+    project {
+        jdkName = 'jbsdk8u152b1248.8_osx_x64'
+        languageLevel = '1.8'
+    }
 }
 
 
 ////////////////////////// IDEA Plugin for JetBrains IDEs /////////////////////
-
 
 intellij {
     // Name for the plugin jar file (same as project name in Devkit)
@@ -94,7 +96,7 @@ intellij {
     // The version of the IDEA distribution that should be used as a dependency
     // Maps to <idea-version since-build=""/> in plugin.xml
     // For a full list of IntelliJ IDEA releases please see https://www.jetbrains.com/intellij-repository/releases
-     version 'IC-2018.2.4'
+     version '2018.2.4'
 
     // The path to locally installed IDEA distribution that should be used as a dependency. 
     // note the IntelliJ version on this path must match format specified in patchPluginXML.sinceBuild
@@ -116,12 +118,12 @@ intellij {
     sandboxDirectory = file("${project.buildDir}/sr-sandbox")
     
 }
-
 // Patch the plugin.xml file with the following values
 patchPluginXml {
     version = project.version               // <version> tag value  
     sinceBuild = 'IC-182.4505.22'           // <idea-version> tag since-build attribute 
     untilBuild = 'IC-183.3975.18'           // <idea-version> tag until-build attribute               
+    // <description> tag
     pluginDescription = 'Putting the cursor in a string literal gives users the option to reverse the string content'
     // <change-notes> tag value
     changeNotes = '0.1 Under development. 0.2 Convert to gradle project.'       
@@ -132,7 +134,8 @@ patchPluginXml {
     destinationDir = file("${project.buildDir}/sr-patchedPluginXmlFiles")
 }
 
-// Just debug
+
+///////////  Just debug stuff //////////////
 task printProperties {
     doLast {
         println project.projectDir
