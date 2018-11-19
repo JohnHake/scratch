@@ -78,13 +78,7 @@ task makeJavaDoc(type: Javadoc) {
 
 //////////////////////// Gradle Core Idea Plugin Stuff //////////////////////// 
 
-// idea Task generates all IDEA configuration files
-idea {
-    project {
-        jdkName = 'jbsdk8u152b1248.8_osx_x64'
-        languageLevel = '1.8'
-    }
-}
+// Ignore, obsolete
 
 
 ////////////////////////// IDEA Plugin for JetBrains IDEs /////////////////////
@@ -121,8 +115,8 @@ intellij {
 // Patch the plugin.xml file with the following values
 patchPluginXml {
     version = project.version               // <version> tag value  
-    sinceBuild = 'IC-182.4505.22'           // <idea-version> tag since-build attribute 
-    untilBuild = 'IC-183.3975.18'           // <idea-version> tag until-build attribute               
+    sinceBuild = '182.2'                    // <idea-version> tag since-build attribute 
+    untilBuild = '184'                      // <idea-version> tag until-build attribute - Not Inclusive!             
     // <description> tag
     pluginDescription = 'Putting the cursor in a string literal gives users the option to reverse the string content'
     // <change-notes> tag value
