@@ -1,1 +1,0 @@
-Placeholder file for plugin *.jar files which go in this directory. 

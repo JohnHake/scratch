@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<plugins>
-  <plugin id="com.jetbrains.sdk.StringReversal"  url="https://localhost/~jhake/repository/v182/StringReversal-0.2.jar" version="0.2">
-    <name>String Literal Reverser</name>
-    <idea-version since-build="182.4" until-build="184"/>
-    <description>Putting the cursor in a string literal gives users the option to reverse the string content</description>
-  </plugin>
-</plugins>
