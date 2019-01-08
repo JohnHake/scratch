@@ -1,27 +1,44 @@
+/*
+ * Copyright 2000-2019 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ */
+
+// For more information about configuring Gradle plugin projects, see the 
+// "Getting Started" section of the IntelliJ Platform SDK.
+
 plugins {
-    id 'java'
-    id 'org.jetbrains.intellij' version '0.4.1'
+  // Gradle Java core plugin.
+  id 'java'
+  // JetBrains IDE plugin for building IDEA projects with Gradle.
+  id 'org.jetbrains.intellij' version '0.4.1'
 }
 
+// The group definition is independent of <id> in plugin.xml
 group 'com.mycompany'
+// The version of this plugin is independent of <version> in plugin.xml
 version '0.1'
 
-// specify the version of the Java programming language be used to compile .java files
+// Specify the version of the Java programming language be used to compile .java files.
 sourceCompatibility = 1.8
 
+// Declare Maven Central repository for downloading and consuming open source binaries. 
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
+// Declare a dependency on junit module to support testing. 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+  testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
 intellij {
-    version '2018.3.1'
+  // Declare the version of the IntelliJ Platform API used for building this project.
+  version '2018.3.1'
 }
+
+
 patchPluginXml {
-    changeNotes """
+  // Document change notes, will be substituted between <change-notes> elements in plugin.xml
+  changeNotes """
       Add change notes here.<br>
       <em>most HTML tags may be used</em>"""
 }
