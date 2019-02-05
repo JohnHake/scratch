@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugins>
+  <plugin id="com.jetbrains.sdk.StringReversal"  url="https://localhost/~jhake/repository/v183/StringReversal-0.3.jar" version="0.3">
+      <idea-version since-build="183.4284.148" until-build="183.9"/>
+      <name>String Literal Reverser</name>
+      <description>For V183. Putting the cursor in a string literal gives users the option to reverse the string content</description>
+  </plugin>
+  <plugin id="com.jetbrains.sdk.StringReversal"  url="https://localhost/~jhake/repository/v182/StringReversal-0.2.jar" version="0.2">
+      <idea-version since-build="182.4505.22" until-build="182.9"/>
+      <name>String Literal Reverser</name>
+      <description>For V182. Putting the cursor in a string literal gives users the option to reverse the string content</description>
+  </plugin>
+</plugins>

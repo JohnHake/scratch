@@ -1,0 +1,148 @@
+///////////////// Generic Gradle Stuff ///////////////////
+
+buildscript {
+
+}
+
+plugins {
+    // Gradle Java core plugin. Adds Java compilation, testing and bundling capabilities to a project.
+    // https://docs.gradle.org/current/userguide/java_plugin.html#java_plugin
+    id 'java'
+    // JetBrains IDEA core plugin for Gradle. Generates files that are used by Intellij IDEA IDE,
+    // thus making it possible to import the project into IDEA.
+    // https://docs.gradle.org/current/userguide/idea_plugin.html#idea_plugin
+    id 'idea'
+    // JetBrains IDE plugin for building IDEA projects with Gradle
+    // https://github.com/JetBrains/gradle-intellij-plugin/blob/master/README.md
+    id 'org.jetbrains.intellij' version '0.3.12'
+}
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.jetbrains.intellij'
+
+// Declare public binary repositories to download and consume open source dependencies
+repositories {
+    mavenCentral()
+}
+
+// Declare dependencies on modules hosted in repositories, files and other Gradle projects
+// https://docs.gradle.org/current/userguide/dependency_types.html#dependency_types
+dependencies {
+    // dependency required to compile the test source of the project
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+// Set Project properties
+//  https://docs.gradle.org/current/userguide/writing_build_scripts.html#sec:standard_project_properties
+project.group 'com.jetbrains.sdk.StringReversal'
+project.version '0.2'
+project.buildDir = file("${project.projectDir}/build")
+
+
+////////////////////////// Gradle Core Java Plugin Stuff ///////////////////////
+
+// Custom project layout for this plugin (just for documentation, layout is actually default.)
+// https://docs.gradle.org/current/userguide/building_java_projects.html#sec:custom_java_source_set_paths
+// Notes on syntax:
+// srcDir 'some/dir/path' is additive to existing source set
+// srcDirs = ['some/dir/path'] replaces default source set with only this set
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java/'
+        }
+        resources {
+            srcDir 'src/main/resources/'
+        }
+    }
+    test {
+        java {
+            srcDir 'src/test/java'
+        }
+        resources {
+            srcDir 'src/test/resources'
+        }
+    }
+}
+
+
+// Build the java docs into the correct output directory
+// https://docs.gradle.org/current/dsl/org.gradle.api.tasks.javadoc.Javadoc.html
+task makeJavaDoc(type: Javadoc) {
+    source = sourceSets.main.java.srcDirs
+    exclude '**/intentionDescriptions/*'
+    classpath = sourceSets.main.compileClasspath
+    destinationDir = project.file('docs/javadoc')
+}
+
+
+//////////////////////// Gradle Core Idea Plugin Stuff //////////////////////// 
+
+// Ignore, obsolete
+
+
+////////////////////////// IDEA Plugin for JetBrains IDEs /////////////////////
+
+intellij {
+    // Name for the plugin jar file (same as project name in Devkit)
+    pluginName 'StringReversal'
+
+    // The version of the IDEA distribution that should be used as a dependency
+    // Maps to <idea-version since-build=""/> in plugin.xml
+    // For a full list of IntelliJ IDEA releases please see https://www.jetbrains.com/intellij-repository/releases
+     version '2018.2.4'
+
+    // The path to locally installed IDEA distribution that should be used as a dependency. 
+    // note the IntelliJ version on this path must match format specified in patchPluginXML.sinceBuild
+    // Commented out because intellij.version and intellij.localPath should not be specified at the same time.
+//    localPath = '/Applications/IntelliJ-IDEA-2018.3-CE-EAP.app'
+    
+    // Patch plugin.xml with since and until build values
+    // patchPluginXml.sinceBuild and patchPluginXml.untilBuild will be used (or their default values if none set).
+    updateSinceUntilBuild = 'true'
+
+    // The user-defined value from patchPluginXml.sinceBuild 
+    // (or its default value) will be used as a since, and an "open" until value.
+    sameSinceUntilBuild = 'false'
+    
+    // Do not download sources while initializing Gradle build
+    downloadSources = 'false'
+    
+    // Define custom sandbox name
+    sandboxDirectory = file("${project.buildDir}/sr-sandbox")
+    
+}
+// Patch the plugin.xml file with the following values
+patchPluginXml {
+    version = project.version               // <version> tag value  
+    sinceBuild = '182.2'                    // <idea-version> tag since-build attribute 
+    untilBuild = '184'                      // <idea-version> tag until-build attribute - Not Inclusive!             
+    // <description> tag
+    pluginDescription = 'Putting the cursor in a string literal gives users the option to reverse the string content'
+    // <change-notes> tag value
+    changeNotes = '0.1 Under development. 0.2 Convert to gradle project.'       
+    // The list of plugin.xml files to patch (in this case just 1)
+    // Note that full path is required for each plugin.xml file
+    pluginXmlFiles = ["${sourceSets.main.resources.asPath}"]
+    // the directory to store patched xml files
+    destinationDir = file("${project.buildDir}/sr-patchedPluginXmlFiles")
+}
+
+
+///////////  Just debug stuff //////////////
+task printProperties {
+    doLast {
+        println project.projectDir
+        println project.buildDir
+        println project.group
+        println project.version
+        println sourceSets.main.allSource.srcDirs
+        println sourceSets.test.allSource.srcDirs
+        println sourceSets.main.java.srcDirs
+        println makeJavaDoc.source.getAsPath()
+        println intellij.sandboxDirectory
+        println patchPluginXml.pluginXmlFiles.asPath
+        println patchPluginXml.destinationDir
+    }
+}
+
