@@ -1,0 +1,67 @@
+IntelliJ SDK Doc Standards
+
+1. Top level is ##, deepest level is ####
+Change document scheme: # is too large, ## too small, #### too similar to ###
+Invent supernodes and header (bar/#foo) to  in _SUMMARY.md
+
+2. Use # for sections, not giant bulleted lists. Bulleted lists cannot be linked.
+
+3. Capitalize Proper nouns: "IntelliJ Platform plugin project" or "IntelliJ Platform Plugin project?"  https://grammar.yourdictionary.com/capitalization/rules-for-capitalizing-proper-nouns.html would say Plugin is a proper noun.
+
+4. Use code markup `` for language keywords, code fragments, libraries, file names, folder names
+4a. Aways use fencing (```   ```) for lines of code, even if it's just one line. Provides copy functionality
+
+5: Use bold for menu paths like **File | New | Project**
+5a. Use italic for quoting text in the UI, e.g. _Use default gradle wrapper (recommended)_.
+
+6. Grammarly settings:
+   Document Type = Technical > Technical > Technical Documentation
+
+7. Active voice preferred instead of passive.
+YES: "Creating a UI Theme follows this general workflow." is preferred over 
+NO:  "A UI Theme can be created using this general workflow."
+
+8. Introductory paragraphs - a paragraph describing the section e.g. "This section describes..." is undesirable. Instead, start the first paragraph with a topic sentence that summarizes the content of the section.
+YES: "Creating a UI Theme follows this general workflow:"
+NO: "This section describes the step-by-step process for creating a UI Theme..."
+
+9. Avoid authoring in the familiar style.
+YES: "Publish the plugin by..."
+NO: "Publish your plugin by..."
+
+10: Embedding code in fenced sections is preferable to including images of code. Use e.g.
+```xml
+```
+
+11. Use "Productivity Tips", not "speed tips", "tips and tricks", etc.
+
+12. Use of yellow band:
+> **Note** You may
+> **warning** You may
+> **Tip** You may
+
+13. IntelliJ Terminology   --- Needs clarification ---
+The following words must _never_ be used standalone: “IntelliJ”, “IDEA”
+Valid: 
+“IntelliJ Platform” when we talk about the platform itself. 
+    --- e.g. "IntelliJ Platform UI elements" or "IntelliJ Platform plugin"
+“IntelliJ IDEA” when we talk about the IDE as in “IntelliJ IDEA Community/Ultimate” 
+    --- Not clear about what "the IDE" means. Is "IntelliJ IDEA" only to be used to refer the IntelliJ products?
+“IntelliJ Platform based” when we talk about all IDEs built on the platform, e.g. including Android Studio, Webstorm etc.
+    --- We lack a good way to talk about IDEs built on the platform. I don't think "IntelliJ Platform-based IDEs" is it.
+    --- In SDK docs it seems reasonable to use “IDE”, because context implie the IDE is based on IntelliJ Platform
+    --- I would suggest as a start we determine which Jetbrains products are based IntelliJ Platform.
+    --- Is it useful to make this distinction?
+
+
+14. 
+
+   
+   
+
+
+
+
+
+TODO:
+1. Change document scheme: # is too large, ## too small, #### too similar to ###
