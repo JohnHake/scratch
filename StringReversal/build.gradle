@@ -90,12 +90,12 @@ intellij {
     // The version of the IDEA distribution that should be used as a dependency
     // Maps to <idea-version since-build=""/> in plugin.xml
     // For a full list of IntelliJ IDEA releases please see https://www.jetbrains.com/intellij-repository/releases
-     version '2018.2.4'
+//     version '2019.1'
 
     // The path to locally installed IDEA distribution that should be used as a dependency. 
     // note the IntelliJ version on this path must match format specified in patchPluginXML.sinceBuild
     // Commented out because intellij.version and intellij.localPath should not be specified at the same time.
-//    localPath = '/Applications/IntelliJ-IDEA-2018.3-CE-EAP.app'
+    localPath = '/Applications/apps/IDEA-U/ch-0/191.4738.6/IntelliJ IDEA 2019.1 EAP.app'
     
     // Patch plugin.xml with since and until build values
     // patchPluginXml.sinceBuild and patchPluginXml.untilBuild will be used (or their default values if none set).
@@ -116,7 +116,7 @@ intellij {
 patchPluginXml {
     version = project.version               // <version> tag value  
     sinceBuild = '182.2'                    // <idea-version> tag since-build attribute 
-    untilBuild = '184'                      // <idea-version> tag until-build attribute - Not Inclusive!             
+    untilBuild = ''                      // <idea-version> tag until-build attribute - Not Inclusive!             
     // <description> tag
     pluginDescription = 'Putting the cursor in a string literal gives users the option to reverse the string content'
     // <change-notes> tag value
