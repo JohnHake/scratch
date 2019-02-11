@@ -1,0 +1,45 @@
+<!--
+  ~ Copyright 2000-2019 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+  -->
+
+<idea-plugin>
+
+  <!--  Unique id for this plugin. Must stay constant for the life of the plugin.  -->
+  <id>org.intellij.sdk.persist.basics</id>
+
+  <!-- Text to display as name on Preferences/Settings | Plugin page -->
+  <name>SDK Persistence Basics Sample Project</name>
+
+  <!-- The <idea-version> attributes are updated by intellij.updateSinceUntilBuild,
+    patchPluginXml.sinceBuild and patchPlugin.untilBuild in build.gradle -->
+  <idea-version since-build="145.0" until-build=""/>
+
+  <!-- The version of this plugin -->
+  <version>Replaced by patchPluginXml.version in build.gradle</version>
+
+  <!-- Text to display as company information on Preferences/Settings | Plugin page -->
+  <vendor email="sdk-example@jetbrains.com" url="https://plugins.jetbrains.com">IntelliJ Platform SDK</vendor>
+
+  <!-- Text to display as description on Preferences/Settings | Plugin page  -->
+  <description>Replaced by patchPluginXml.pluginDescription in build.gradle</description>
+
+  <!-- Text to display as description on Preferences/Settings Plugin page  -->
+  <change-notes>Replaced by patchPluginXml.changeNotes in build.gradle</change-notes>
+
+  <application-components>
+    <!-- This component declaration is necessary so that IntelliJ Platform manages persistence -->
+    <component>
+      <implementation-class>org.intellij.sdk.persist.basics.BpState</implementation-class>
+      <interface-class>org.intellij.sdk.persist.basics.BpState</interface-class>
+    </component>
+  </application-components>
+
+
+  <project-components>
+    <!-- BpComponent is a quick and dirty way to change the state of the persistent data, BpState. -->
+    <component>
+      <implementation-class>org.intellij.sdk.persist.basics.BpComponent</implementation-class>
+    </component>
+  </project-components>
+
+</idea-plugin>

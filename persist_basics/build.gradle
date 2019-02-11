@@ -1,0 +1,46 @@
+/*
+ * Copyright 2000-2019 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ */
+
+plugins {
+  id 'java'
+  id 'org.jetbrains.intellij' version '0.4.2'
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+group 'org.intellij.sdk.persist.basics'
+version '0.1'                 // Plugin version, used in patchPluginXml.version
+sourceCompatibility = 1.8     // JDK version used by the source code 
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+  version '191.4738.6'
+  sandboxDirectory = file("${project.buildDir}/idea-sandbox")
+}
+
+// Substitute these values in plugin.xml
+patchPluginXml {
+  version = project.version     // <version> tag value
+  sinceBuild = '145.0'          // <idea-version> tag since-build attribute
+  untilBuild = ''               // <idea-version> tag until-build attribute - not inclusive
+  // <description> tag value
+  pluginDescription = 'Demonstrates how plugins use the persistence model in IntelliJ Platform-based IDEs<br>Adds <em>Greeting</em> to the main menu.<br>Pops a simple <b>Hello</b> dialog'
+  changeNotes = '<b>0.1.0</b> Initial release.'   // <change-notes> tag value
+}
+
+
+// Define javadoc paths, force rebuild before jar is built
+javadoc {
+  // Set of source files to include
+  source = sourceSets.main.java.srcDirs
+  // Include all class files, e.g. from libraries
+  classpath = sourceSets.main.compileClasspath
+}
+jar.dependsOn javadoc
