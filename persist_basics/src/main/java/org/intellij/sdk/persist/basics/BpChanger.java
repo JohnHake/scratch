@@ -4,7 +4,6 @@
 
 package org.intellij.sdk.persist.basics;
 
-import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.project.Project;
@@ -12,12 +11,12 @@ import com.intellij.openapi.ui.Messages;
 import org.jetbrains.annotations.*;
 
 /*
-* This class exists solely to change the state of the persistent data, BpState.State.
+* This class exists solely to change the state of the persistent data, BpPersistComponent.BpState.
 * It has NOTHING to do with persistence per se.
 */
-public class BpComponent implements ProjectComponent {
+public class BpChanger implements ProjectComponent {
   
-  public BpComponent(Project project) {
+  public BpChanger(Project project) {
   }
   
   /**
@@ -25,18 +24,21 @@ public class BpComponent implements ProjectComponent {
    */
   @Override
   public void projectOpened() {
-    BpState configService = ServiceManager.getService(BpState.class);
-    String prevStrState = configService.getFoo();
-    configService.setFoo( prevStrState + "1" );
-    StringBuilder displayStr = new StringBuilder( "Old State: " + prevStrState + "\n" + "New State: " + configService.getFoo() );
-    Messages.showMessageDialog(displayStr.toString(), "BpState.State", Messages.getErrorIcon());
+    // TODO BpPersistComponent can be null if nothing has been persisted yet.
+    BpPersistComponent configService = ServiceManager.getService(BpPersistComponent.class);
+    String prevStrState = configService.getData();
+    configService.setData( prevStrState + "1" );
+    StringBuilder displayStr = new StringBuilder( "Old BpState: " + prevStrState + "\n" + "New BpState: " + configService.getData() );
+    Messages.showMessageDialog(displayStr.toString(), "BpPersistComponent.BpState", BpIcons.SDK_ICON);
   }
   
   /**
    * Invoked when the project corresponding to this component instance is closed.
    */
   @Override
-  public void projectClosed() {}
+  public void projectClosed() {
+    this.projectOpened();
+  }
   
   /**
    * Component should perform initialization and communication with other components in this method.
