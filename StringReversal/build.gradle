@@ -14,7 +14,7 @@ plugins {
     id 'idea'
     // JetBrains IDE plugin for building IDEA projects with Gradle
     // https://github.com/JetBrains/gradle-intellij-plugin/blob/master/README.md
-    id 'org.jetbrains.intellij' version '0.3.12'
+    id 'org.jetbrains.intellij' version '0.4.8'
 }
 apply plugin: 'java'
 apply plugin: 'idea'
