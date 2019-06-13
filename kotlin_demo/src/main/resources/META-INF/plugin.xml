@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>org.intellij.sdk.kotlin_demo</id>
+    <name>kotlin_demo</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+    Adds a <i>Greeting</i> menu group anchored last in the <b>Main Menu</b>
+    ]]></description>
+
+    <version>2.0.0</version>
+
+    <change-notes><![CDATA[
+      <ul>
+        <li><b>2.0.0</b> Converted to Gradle project.</li>
+        <li><b>1.0</b> Release 2019.1 and earlier.</li>
+      </ul>
+    ]]>
+    </change-notes>
+
+    <idea-version since-build="171.0"/>
+
+    <!-- Product and plugin compatibility requirements -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.kotlin</depends>
+
+    <actions>
+        <group id="MyPlugin.TestMeu" text="Greeting" description="Greeting menu">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="Myplugin.Textboxes" class="HelloAction" text="Hello" description="Says hello"/>
+        </group>
+    </actions>
+
+</idea-plugin>
