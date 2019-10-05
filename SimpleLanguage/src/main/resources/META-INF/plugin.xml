@@ -1,0 +1,27 @@
+<idea-plugin>
+  <id>com.simpleplugin.simple_lang</id>
+  <name>Simple_Language for Testing PR221</name>
+  <vendor url="http://www.jetbrains.com">JetBrains</vendor>
+
+  <description><![CDATA[
+    Simple_Language plugin for testing PR221 based on simple_language_plugin</em>
+    ]]></description>
+
+  <idea-version since-build="192"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.lang</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <fileType name="Simple file" implementationClass="com.simpleplugin.SimpleFileType" fieldName="INSTANCE"
+            language="Simple" extensions="simple"/>
+    <lang.parserDefinition language="Simple" implementationClass="com.simpleplugin.SimpleParserDefinition"/>
+    <lang.syntaxHighlighterFactory language="Simple" implementationClass="com.simpleplugin.SimpleSyntaxHighlighterFactory"/>
+    <colorSettingsPage implementation="com.simpleplugin.SimpleColorSettingsPage"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+</idea-plugin>
