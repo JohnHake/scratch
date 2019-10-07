@@ -12,6 +12,7 @@
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
   <depends>com.intellij.modules.lang</depends>
+  <depends>com.intellij.modules.java</depends>
 
   <extensions defaultExtensionNs="com.intellij">
     <fileType name="Simple file" implementationClass="com.simpleplugin.SimpleFileType" fieldName="INSTANCE"
@@ -19,6 +20,7 @@
     <lang.parserDefinition language="Simple" implementationClass="com.simpleplugin.SimpleParserDefinition"/>
     <lang.syntaxHighlighterFactory language="Simple" implementationClass="com.simpleplugin.SimpleSyntaxHighlighterFactory"/>
     <colorSettingsPage implementation="com.simpleplugin.SimpleColorSettingsPage"/>
+    <annotator language="JAVA" implementationClass="com.simpleplugin.SimpleAnnotator"/>
   </extensions>
 
   <actions>

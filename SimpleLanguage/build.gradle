@@ -22,8 +22,9 @@ sourceSets.main.java.srcDirs 'src/main/gen'
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-  version '2019.2'
+  version '2019.2.3'
   type = 'IU'
+  plugins 'java'
   updateSinceUntilBuild = 'false'
 }
 
@@ -38,4 +39,4 @@ task printProperties {
   }
 }
 
-prepareSandbox.dependsOn printProperties
+jar.dependsOn printProperties
