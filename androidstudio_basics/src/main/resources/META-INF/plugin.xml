@@ -1,0 +1,43 @@
+<!-- Copyright 2000-2019 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. -->
+
+<idea-plugin>
+
+  <!--  Unique id for this plugin. Must stay constant for the life of the plugin.  -->
+  <id>com.intellij.sdk.androidstudio</id>
+
+  <!-- Text to display as name on Preferences/Settings | Plugin page -->
+  <name>SDK: Android Studio Plugin Project Sample</name>
+
+  <!-- Text to display as description on Preferences/Settings | Plugin page  -->
+  <description>
+    <![CDATA[
+    Demonstrates how to configure a plugin project for an Android Studio plugin.
+    ]]>
+  </description>
+  <change-notes>
+    <![CDATA[
+      <b>0.1.0</b> First release v2019.2.3 IntelliJ Platform / v3.5.1 Android Studio<br>
+    ]]>
+  </change-notes>
+
+  <!-- Text to display as company information on Preferences/Settings | Plugin page -->
+  <vendor url="https://plugins.jetbrains.com">IntelliJ Platform SDK</vendor>
+
+  <!-- The version of this plugin -->
+  <version>0.1.0</version>
+
+  <!-- Compatible with the following versions of IntelliJ Platform -->
+  <idea-version since-build="192.3"/>
+
+  <actions>
+    <!-- Define a new menu group as a last entry in the main menu    -->
+    <group id="org.intellij.sdk.androidstudio.GroupedActions" text="SDK: Android Plugin" popup="true">
+      <add-to-group group-id="MainMenu" anchor="last"/>
+      <!-- Add a single action to the new group     -->
+      <action id="com.intellij.sdk.androidstudio.PopupDialogAction" class="com.intellij.sdk.androidstudio.PopupDialogAction"
+              text="Pop a Dialog" description="SDK Android Studio basics example" icon="SdkIcons.Sdk_default_icon">
+      </action>
+    </group>
+  </actions>
+
+</idea-plugin>
