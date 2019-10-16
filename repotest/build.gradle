@@ -17,22 +17,30 @@ dependencies {
   testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
-
-// intellij {}  // Gets default = LATEST-EAP-SNAPSHOT = 193.4386.10
-//  intellij.version 'LATEST-EAP-SNAPSHOT'  // Gets 193.4386.10
-
-// Gets 193.4386.10 IFF snapshots repo is in repositories {}, otherwise
-// "Could not GET 'https://cache-redirector.jetbrains.com/www.jetbrains.com/intellij-repository/snapshots/com/jetbrains/intellij/idea/ideaIC/193.4386.10-EAP-SNAPSHOT/maven-metadata.xml'"
+// Gets LATEST-EAP-SNAPSHOT (193.4386.10) IFF snapshots repo URL is in repositories {}, otherwise
+// Could not GET 'https://cache-redirector.jetbrains.com/www.jetbrains.com/intellij-repository/snapshots/com/jetbrains/intellij/idea/ideaIC/LATEST-EAP-SNAPSHOT/maven-metadata.xml'.
+intellij {}
+//  intellij.version 'LATEST-EAP-SNAPSHOT'
 // intellij.version '193.4386.10-EAP-SNAPSHOT'
-
-// Gets 193.4386.10 IFF snapshots repo is in repositories {}, otherwise
-// "Could not GET 'https://cache-redirector.jetbrains.com/www.jetbrains.com/intellij-repository/snapshots/com/jetbrains/intellij/idea/ideaIC/193.4386-EAP-CANDIDATE-SNAPSHOT/maven-metadata.xml'"
 // intellij.version '193.4386-EAP-CANDIDATE-SNAPSHOT'
-
-// Gets 193.4386.10 IFF snapshots repo is in repositories {}, otherwise
-// "Could not GET 'https://cache-redirector.jetbrains.com/www.jetbrains.com/intellij-repository/snapshots/com/jetbrains/intellij/idea/ideaIC/193-EAP-SNAPSHOT/maven-metadata.xml'"
-  intellij.version '193-EAP-SNAPSHOT'
+//  intellij.version '193-EAP-SNAPSHOT'
 
 patchPluginXml {
   version project.version
 }
+
+/*
+IntelliJ IDEA 2019.2.3 (Ultimate Edition)
+Build #IU-192.6817.14, built on September 23, 2019
+Licensed to JetBrains Team / John Hake
+You have a perpetual fallback license for this version
+Subscription is active until December 10, 2020
+Runtime version: 11.0.4+10-b304.69 x86_64
+VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
+macOS 10.15
+GC: ParNew, ConcurrentMarkSweep
+Memory: 2014M
+Cores: 4
+Registry: java.completion.argument.hints.internal=false, debugger.watches.in.variables=false
+Non-Bundled Plugins: Key Promoter X, org.jetbrains.idea.grammar, BashSupport, org.jetbrains.kotlin
+*/
