@@ -1,0 +1,38 @@
+plugins {
+  id 'java'
+  id 'org.jetbrains.intellij' version '0.4.10'
+}
+
+group 'com.intellij.sdk'
+version '1.0.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+  maven { url "https://www.jetbrains.com/intellij-repository/snapshots" }
+}
+
+dependencies {
+  testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+
+// intellij {}  // Gets default = LATEST-EAP-SNAPSHOT = 193.4386.10
+//  intellij.version 'LATEST-EAP-SNAPSHOT'  // Gets 193.4386.10
+
+// Gets 193.4386.10 IFF snapshots repo is in repositories {}, otherwise
+// "Could not GET 'https://cache-redirector.jetbrains.com/www.jetbrains.com/intellij-repository/snapshots/com/jetbrains/intellij/idea/ideaIC/193.4386.10-EAP-SNAPSHOT/maven-metadata.xml'"
+// intellij.version '193.4386.10-EAP-SNAPSHOT'
+
+// Gets 193.4386.10 IFF snapshots repo is in repositories {}, otherwise
+// "Could not GET 'https://cache-redirector.jetbrains.com/www.jetbrains.com/intellij-repository/snapshots/com/jetbrains/intellij/idea/ideaIC/193.4386-EAP-CANDIDATE-SNAPSHOT/maven-metadata.xml'"
+// intellij.version '193.4386-EAP-CANDIDATE-SNAPSHOT'
+
+// Gets 193.4386.10 IFF snapshots repo is in repositories {}, otherwise
+// "Could not GET 'https://cache-redirector.jetbrains.com/www.jetbrains.com/intellij-repository/snapshots/com/jetbrains/intellij/idea/ideaIC/193-EAP-SNAPSHOT/maven-metadata.xml'"
+  intellij.version '193-EAP-SNAPSHOT'
+
+patchPluginXml {
+  version project.version
+}
