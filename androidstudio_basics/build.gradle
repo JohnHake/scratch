@@ -23,7 +23,10 @@ intellij {
   version '191.8026.42'
   type 'IC'
   plugins 'android'
-  alternativeIdePath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/AndroidStudio/ch-0/191.5900203/Android Studio.app'
+  // Works for Toolbox installed Android Studio in default Toolbox location
+//  alternativeIdePath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/AndroidStudio/ch-0/191.5900203/Android Studio.app'
+  // Works for manually installed Android Studio in default location
+  alternativeIdePath '/Applications/Android Studio.app'
 }
 compileKotlin {
   kotlinOptions.jvmTarget = "1.8"
@@ -31,12 +34,15 @@ compileKotlin {
 compileTestKotlin {
   kotlinOptions.jvmTarget = "1.8"
 }
-/*
+
 runIde {
   // Absolute path to installed target v3.5 Android Studio to use as IDE Development Instance
-  ideaDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/AndroidStudio/ch-0/191.5900203/Android Studio.app'
+  // fails...> java.io.FileNotFoundException: /Applications/Android Studio.app/build.txt (No such file or directory)
+//  ideaDirectory '/Applications/Android Studio.app'
+  // fails...
+//  ideaDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/AndroidStudio/ch-0/191.5900203/Android Studio.app'
 }
-*/
+
 patchPluginXml {
   version = project.version
 }
