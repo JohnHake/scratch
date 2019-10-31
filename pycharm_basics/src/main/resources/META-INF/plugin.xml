@@ -4,7 +4,7 @@
     <id>com.intellij.sdk.pycharm</id>
 
   <!-- Text to display as name on Preferences/Settings | Plugin page -->
-    <name>SDK: PyCharm Plugin Project Pattern</name>
+    <name>SDK: PyCharm Sample Project</name>
 
   <!-- Text to display as description on Preferences/Settings | Plugin page  -->
   <description>
