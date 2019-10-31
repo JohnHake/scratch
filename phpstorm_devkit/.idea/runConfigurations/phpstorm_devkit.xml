@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="phpstorm_devkit" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+    <module name="phpstorm_devkit" />
+    <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -ea" />
+    <option name="PROGRAM_PARAMETERS" value="" />
+    <alternative-path path="PS-192.7142.41" alternative-path-enabled="true" />
+    <predefined_log_file enabled="true" id="idea.log" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
