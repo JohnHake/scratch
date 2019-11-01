@@ -10,9 +10,6 @@ sourceCompatibility = 1.8
 
 repositories {
   mavenCentral()
-  maven { url "https://www.jetbrains.com/intellij-repository/releases" }
-  maven { url "https://www.jetbrains.com/intellij-repository/snapshots" }
-  maven { url "https://jetbrains.bintray.com/intellij-third-party-dependencies" }
 }
 
 dependencies {
@@ -22,37 +19,15 @@ dependencies {
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
   // Define IntelliJ Platform against which to build the plugin project.
-  version '192.6817.14'
-  type 'IU'
-  plugins 'JavaScriptLanguage', 'JavaScriptDebugger', 'CSS'
-  /*
-  Either use
-    IU + bundle plugin --> license snafus?  Test to find out.
-    WS --> need WS type implemented, Alexander
-   */
+  version '2019.2.4'
+  type 'WS'
 }
 
 runIde {
   // Absolute path to installed WebStorm application to use as IDE Development Instance
-  ideaDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/192.6817.13/WebStorm.app/'
+  ideaDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/192.7142.35/WebStorm.app/Contents'
 }
 
 patchPluginXml {
   version = project.version
 }
-
-/*
-WebStorm 2019.2.3
-Build #WS-192.6817.13, built on September 23, 2019
-Licensed to JetBrains Team / John Hake
-You have a perpetual fallback license for this version
-Subscription is active until December 10, 2020
-Runtime version: 11.0.4+10-b304.69 x86_64
-VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
-macOS 10.15
-GC: ParNew, ConcurrentMarkSweep
-Memory: 725M
-Cores: 4
-Registry: debugger.watches.in.variables=false
-Non-Bundled Plugins:
- */

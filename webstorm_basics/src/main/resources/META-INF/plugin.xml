@@ -25,7 +25,7 @@
   <version>0.1.0</version>
 
   <!-- Compatible with the following versions of IntelliJ Platform -->
-  <idea-version since-build="192.3"/>
+  <idea-version since-build="192.4"/>
 
   <depends>JavaScript</depends>
 
