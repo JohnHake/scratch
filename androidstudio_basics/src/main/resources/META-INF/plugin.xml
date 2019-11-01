@@ -27,11 +27,11 @@
   <version>0.1.0</version>
 
   <!-- Compatible with the following versions of IntelliJ Platform -->
-  <idea-version since-build="192.3"/>
+  <idea-version since-build="191.4"/>
 
   <actions>
     <!-- Define a new menu group as a last entry in the main menu    -->
-    <group id="org.intellij.sdk.androidstudio.GroupedActions" text="SDK: Android Plugin" popup="true">
+    <group id="org.intellij.sdk.androidstudio.GroupedActions" text="SDK: Plugin" popup="true">
       <add-to-group group-id="MainMenu" anchor="last"/>
       <!-- Add a single action to the new group     -->
       <action id="com.intellij.sdk.androidstudio.PopupDialogAction" class="com.intellij.sdk.androidstudio.PopupDialogAction"

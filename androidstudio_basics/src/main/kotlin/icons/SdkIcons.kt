@@ -7,5 +7,5 @@ import com.intellij.openapi.util.IconLoader
 import javax.swing.*
 
 object SdkIcons {
-    val Sdk_default_icon = IconLoader.getIcon("/icons/sdk_16.svg")
+  val Sdk_default_icon: Icon = IconLoader.getIcon("/icons/sdk_16.svg")
 }

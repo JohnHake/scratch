@@ -4,7 +4,6 @@ package com.intellij.sdk.androidstudio
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
-import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.Messages
 import icons.SdkIcons
 
@@ -28,7 +27,7 @@ class PopupDialogAction : AnAction() {
             proj,
             "Popup dialog action",
             "Greetings from Android Studio Basics Plugin",
-            SdkIcons.Sdk_default_icon
+            Messages.getInformationIcon()
         )
     }
 
