@@ -1,0 +1,44 @@
+<!-- Copyright 2000-2019 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. -->
+
+<idea-plugin>
+  <!--  Unique id for this plugin. Must stay constant for the life of the plugin.  -->
+  <id>com.intellij.sdk.rubymine</id>
+
+  <!-- Text to display as name on Preferences/Settings | Plugin page -->
+  <name>SDK: RubyMine Sample Project</name>
+
+  <!-- The version of this plugin -->
+  <version>0.1.0</version>
+
+  <!-- IntelliJ Platform Version required for Plugin Logo -->
+  <idea-version since-build="191.1"/>
+
+  <!-- Requires the ruby plugin for using the Ruby APIs in RubyMine product -->
+  <depends>com.intellij.modules.ruby</depends>
+
+  <!-- Text to display as description on Preferences/Settings | Plugin page  -->
+  <description>
+    <![CDATA[
+    Demonstrates how to configure a plugin project for a RubyMine plugin.
+    ]]>
+  </description>
+  <change-notes>
+    <![CDATA[
+      <b>0.1.0</b> First release v2019.2 IntelliJ Platform<br>
+    ]]>
+  </change-notes>
+
+  <!-- Text to display as company information on Preferences/Settings | Plugin page -->
+  <vendor url="https://plugins.jetbrains.com">IntelliJ Platform SDK</vendor>
+
+  <actions>
+    <!-- Define a new menu group as a last entry in the main menu    -->
+    <group id="org.intellij.sdk.rubymine.NewGroupedActions" text="SDK: Plugin" popup="true">
+      <add-to-group group-id="MainMenu" anchor="last"/>
+      <!-- Add a single action to the new group     -->
+      <action id="com.intellij.sdk.rubymine.PopupDialogAction" class="com.intellij.sdk.rubymine.PopupDialogAction"
+              text="Pop a Dialog" description="SDK PyCharm basics example" icon="SdkIcons.Sdk_default_icon">
+      </action>
+    </group>
+  </actions>
+</idea-plugin>
