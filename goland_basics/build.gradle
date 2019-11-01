@@ -1,0 +1,52 @@
+plugins {
+  id 'java'
+  id 'org.jetbrains.intellij' version '0.4.10'
+}
+
+group 'com.intellij.sdk.'
+version '0.1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+  maven { url "https://www.jetbrains.com/intellij-repository/releases" }
+  maven { url "https://www.jetbrains.com/intellij-repository/snapshots" }
+  maven { url "https://jetbrains.bintray.com/intellij-third-party-dependencies" }
+}
+
+dependencies {
+  testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+// Copyright 2000-2019 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+  version '192.6817.14'
+  type 'IU'
+}
+
+runIde {
+  // Absolute path to installed WebStorm application to use as IDE Development Instance
+  ideaDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/Goland/ch-0/192.6817.25/GoLand.app/Contents'
+}
+
+patchPluginXml {
+  version = project.version
+}
+
+/*
+GoLand 2019.2.3
+Build #GO-192.6817.25, built on October 1, 2019
+Licensed to JetBrains Team / John Hake
+Subscription is active until December 10, 2019
+Runtime version: 11.0.4+10-b304.69 x86_64
+VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
+macOS 10.15
+GC: ParNew, ConcurrentMarkSweep
+Memory: 725M
+Cores: 4
+Registry: run.processes.with.pty=TRUE, ide.completion.variant.limit=500, suggest.all.run.configurations.from.context=true
+Non-Bundled Plugins:
+ */
