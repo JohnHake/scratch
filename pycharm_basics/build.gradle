@@ -1,3 +1,5 @@
+// Copyright 2000-2019 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+
 plugins {
   id 'java'
   id 'org.jetbrains.intellij' version '0.4.10'
@@ -23,11 +25,6 @@ dependencies {
 intellij {
   version '2019.2.3'
   type 'PY'
-}
-
-runIde {
-  // Absolute path to installed WebStorm application to use as IDE Development Instance
-  ideaDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/PyCharm-P/ch-0/192.6817.19/PyCharm.app/Contents'
 }
 
 patchPluginXml {
