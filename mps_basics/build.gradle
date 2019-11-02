@@ -1,0 +1,45 @@
+// Copyright 2000-2019 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+
+plugins {
+  id 'java'
+  id 'org.jetbrains.intellij' version '0.4.10'
+}
+
+group 'com.intellij.sdk'
+version '0.1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+  maven { url "https://www.jetbrains.com/intellij-repository/releases" }
+  maven { url "https://www.jetbrains.com/intellij-repository/snapshots" }
+  maven { url "https://jetbrains.bintray.com/intellij-third-party-dependencies" }
+}
+
+dependencies {
+  testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+  version '2019.2.3'
+  type 'MPS'
+}
+
+patchPluginXml {
+  version = project.version
+}
+
+/*
+JetBrains MPS 2019.2.3
+Build #MPS-192.2321, built on October 2, 2019
+Runtime version: 11.0.4+10-b304.75 x86_64
+VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
+macOS 10.15
+GC: ParNew, ConcurrentMarkSweep
+Memory: 2014M
+Cores: 4
+Registry: ide.mac.message.dialogs.as.sheets=false, idea.invalidate.caches.invalidates.vfs=true, performance.watcher.freeze.report=false
+Non-Bundled Plugins:
+ */
