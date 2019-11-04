@@ -20,7 +20,8 @@ dependencies {
 intellij {
   // Define IntelliJ Platform against which to build the plugin project.
   version '2019.2.4'
-  type 'WS'
+  type 'IU'
+  plugins 'JavaScriptLanguage'
 }
 
 runIde {
