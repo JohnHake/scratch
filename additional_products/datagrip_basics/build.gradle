@@ -10,9 +10,6 @@ sourceCompatibility = 1.8
 
 repositories {
   mavenCentral()
-  maven { url "https://www.jetbrains.com/intellij-repository/releases" }
-  maven { url "https://www.jetbrains.com/intellij-repository/snapshots" }
-  maven { url "https://jetbrains.bintray.com/intellij-third-party-dependencies" }
 }
 
 dependencies {
@@ -21,10 +18,10 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-  // java.lang.RuntimeException: Cannot load resource: /idea/0xDBEApplicationInfo.xml
+  // IntelliJ Platform compatible with DataGrip 2019.2.6
   version '2019.2.4'
   type 'IU'
-  plugins 'DatabaseTools', 'java'
+  plugins 'DatabaseTools'
 }
 
 runIde {

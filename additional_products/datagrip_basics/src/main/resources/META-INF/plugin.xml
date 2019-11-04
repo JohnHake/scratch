@@ -8,6 +8,15 @@
   <!-- Text to display as name on Preferences/Settings | Plugin page -->
   <name>SDK: DataGrip Sample Project</name>
 
+  <!-- The version of this plugin -->
+  <version>0.1.0</version>
+
+  <!-- Requires 2019.1 for plugin log support -->
+  <idea-version since-build="191" />
+
+  <!-- Requires the database plugin to run -->
+  <depends>com.intellij.database</depends>
+
   <!-- Text to display as description on Preferences/Settings | Plugin page  -->
   <description>
     <![CDATA[
@@ -16,18 +25,12 @@
   </description>
   <change-notes>
     <![CDATA[
-      <b>0.1.0</b> First release v2019.2 IntelliJ Platform<br>
+      <b>0.1.0</b> First release<br>
     ]]>
   </change-notes>
 
   <!-- Text to display as company information on Preferences/Settings | Plugin page -->
   <vendor url="https://plugins.jetbrains.com">IntelliJ Platform SDK</vendor>
-
-  <!-- The version of this plugin -->
-  <version>0.1.0</version>
-
-  <!-- Requires the database plugin to run -->
-  <depends>com.intellij.database</depends>
 
     <actions>
       <!-- Define a new menu group as a last entry in the main menu    -->
@@ -35,7 +38,7 @@
         <add-to-group group-id="MainMenu" anchor="last"/>
         <!-- Add a single action to the new group     -->
         <action id="com.intellij.sdk.datagrip.PopupDialogAction" class="com.intellij.sdk.datagrip.PopupDialogAction"
-                text="Pop a Dialog" description="SDK PyCharm basics example" icon="SdkIcons.Sdk_default_icon">
+                text="Pop a Dialog" description="SDK DataGrip basics example" icon="SdkIcons.Sdk_default_icon">
         </action>
       </group>
     </actions>
