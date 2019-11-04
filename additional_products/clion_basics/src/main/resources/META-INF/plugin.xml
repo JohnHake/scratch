@@ -14,7 +14,7 @@
   <idea-version since-build="191.1"/>
 
   <!-- Requires the CLion module for using the CLion APIs in plugin -->
-  <depends>com.intellij.modules.clion</depends>
+  <depends>com.intellij.modules.cidr.lang</depends>
 
   <!-- Text to display as description on Preferences/Settings | Plugin page  -->
   <description>
@@ -24,7 +24,7 @@
   </description>
   <change-notes>
     <![CDATA[
-      <b>0.1.0</b> First release v2019.2 IntelliJ Platform<br>
+      <b>0.1.0</b> First release<br>
     ]]>
   </change-notes>
 

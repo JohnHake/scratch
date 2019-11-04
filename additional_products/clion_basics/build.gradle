@@ -20,7 +20,8 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-  version '2019.2.4'
+  // CLion version compatible with v2019.2.4 IntelliJ Platform
+  version '2019.2.4'     // should be 2019.2.5
   type 'CL'
 }
 
