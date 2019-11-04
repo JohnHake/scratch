@@ -12,9 +12,6 @@ sourceCompatibility = 1.8
 
 repositories {
   mavenCentral()
-  maven { url "https://www.jetbrains.com/intellij-repository/releases" }
-  maven { url "https://www.jetbrains.com/intellij-repository/snapshots" }
-  maven { url "https://jetbrains.bintray.com/intellij-third-party-dependencies" }
 }
 
 dependencies {
@@ -30,16 +27,3 @@ intellij {
 patchPluginXml {
   version = project.version
 }
-
-/*
-JetBrains MPS 2019.2.3
-Build #MPS-192.2321, built on October 2, 2019
-Runtime version: 11.0.4+10-b304.75 x86_64
-VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
-macOS 10.15
-GC: ParNew, ConcurrentMarkSweep
-Memory: 2014M
-Cores: 4
-Registry: ide.mac.message.dialogs.as.sheets=false, idea.invalidate.caches.invalidates.vfs=true, performance.watcher.freeze.report=false
-Non-Bundled Plugins:
- */
