@@ -6,7 +6,16 @@
   <id>com.intellij.sdk.androidstudio</id>
 
   <!-- Text to display as name on Preferences/Settings | Plugin page -->
-  <name>SDK: Android Studio Plugin Project Sample</name>
+  <name>SDK: Android Studio Sample Project</name>
+
+  <!-- The version of this plugin -->
+  <version>0.1.0</version>
+
+  <!-- Build 191.4 is required for conpatibility with Android Studio 3.5.1 -->
+  <idea-version since-build="191.8026.42"/>
+
+  <!-- Requires Android Studio APIs -->
+  <depends>com.intellij.modules.androidstudio</depends>
 
   <!-- Text to display as description on Preferences/Settings | Plugin page  -->
   <description>
@@ -16,18 +25,12 @@
   </description>
   <change-notes>
     <![CDATA[
-      <b>0.1.0</b> First release v2019.2.3 IntelliJ Platform / v3.5.1 Android Studio<br>
+      <b>0.1.0</b> First release<br>
     ]]>
   </change-notes>
 
   <!-- Text to display as company information on Preferences/Settings | Plugin page -->
   <vendor url="https://plugins.jetbrains.com">IntelliJ Platform SDK</vendor>
-
-  <!-- The version of this plugin -->
-  <version>0.1.0</version>
-
-  <!-- Compatible with the following versions of IntelliJ Platform -->
-  <idea-version since-build="191.4"/>
 
   <actions>
     <!-- Define a new menu group as a last entry in the main menu    -->

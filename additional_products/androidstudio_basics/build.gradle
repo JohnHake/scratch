@@ -20,8 +20,10 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
+  // Build 191.4 is required for conpatibility with Android Studio 3.5.1
   version '191.8026.42'
-  type 'AS'
+  type 'IC'
+  plugins 'android'
 }
 compileKotlin {
   kotlinOptions.jvmTarget = "1.8"
