@@ -21,7 +21,7 @@ intellij {
   // Define IntelliJ Platform against which to build the plugin project.
   // Use the IntelliJ Platform BRANCH.BUILD version matching "targetIDE" (PhpStorm)
   version '192.7142.36'   // baseIntelliJPlatformVersion
-  type 'IC'
+  type 'IU'               // IU required for compatibility with the php plugin
   // Require the targetIDE plugin or library
   plugins 'com.jetbrains.php:192.6603.42'
 }
