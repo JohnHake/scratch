@@ -18,11 +18,17 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-  version '2019.2.4'
-  type 'PS'
+  // Define IntelliJ Platform against which to build the plugin project.
+  // Use the IntelliJ Platform BRANCH.BUILD version matching "targetIDE" (PhpStorm)
+  version '192.7142.36'   // baseIntelliJPlatformVersion
+  type 'IC'
+  // Require the targetIDE plugin or library
+  plugins 'com.jetbrains.php:192.6603.42'
 }
 
 runIde {
+  // Absolute path to installed target application to use as IDE Development Instance
+  // Note macOS dialect.
   ideaDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/PhpStorm/ch-0/192.7142.41/PhpStorm.app/Contents'
 }
 

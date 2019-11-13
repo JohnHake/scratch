@@ -11,8 +11,8 @@
   <!-- The version of this plugin -->
   <version>0.1.0</version>
 
-  <!-- 2019 required for Plugin Logo -->
-  <idea-version since-build="191"/>
+  <!-- Version required to support version of PHP plugin -->
+  <idea-version since-build="192.2"/>
 
   <!-- Targeting PhpStorm, so is dependent on the PHP plugin -->
   <depends>com.jetbrains.php</depends>
