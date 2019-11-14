@@ -1,6 +1,6 @@
 plugins {
   id 'java'
-  id 'org.jetbrains.intellij' version '0.4.10'
+  id 'org.jetbrains.intellij' version '0.4.13'
 }
 
 group 'com.intellij.sdk.'
@@ -20,14 +20,14 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-  version '192.6817.14'
+  version '192.7142.36'
   type 'IU'
   plugins 'org.jetbrains.plugins.go:192.6603.23.335'
 }
 
 runIde {
-  // Absolute path to installed WebStorm application to use as IDE Development Instance
-  ideaDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/Goland/ch-0/192.6817.25/GoLand.app/Contents'
+  // Absolute path to installed GoLand application to use as IDE Development Instance
+  ideaDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/Goland/ch-0/192.7142.48/GoLand.app/Contents'
 }
 
 patchPluginXml {
