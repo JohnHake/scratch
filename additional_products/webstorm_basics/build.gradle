@@ -1,6 +1,6 @@
 plugins {
   id 'java'
-  id 'org.jetbrains.intellij' version '0.4.10'
+  id 'org.jetbrains.intellij' version '0.4.13'
 }
 
 group 'com.intellij.sdk'
@@ -26,6 +26,7 @@ intellij {
 
 runIde {
   // Absolute path to installed WebStorm application to use as IDE Development Instance
+  // (Comment out ideaDirectory to launch IntelliJ IDEA Ultimate instead of WebStorm as the Development Instance)
   ideaDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/192.7142.35/WebStorm.app/Contents'
 }
 

@@ -22,7 +22,7 @@
   </description>
   <change-notes>
     <![CDATA[
-      <b>0.1.0</b> First release<br>
+      <b>0.1.0</b> First release for cross-product pages.<br>
     ]]>
   </change-notes>
 
@@ -31,7 +31,7 @@
 
   <actions>
     <!-- Define a new menu group as a last entry in the main menu    -->
-    <group id="com.intellij.sdk.androidstudio.GroupedActions" text="SDK: Plugin" popup="true">
+    <group id="com.intellij.sdk.webstorm.GroupedActions" text="SDK: Plugin" popup="true">
       <add-to-group group-id="MainMenu" anchor="last"/>
       <!-- Add a single action to the new group     -->
       <action id="com.intellij.sdk.webstorm.PopupDialogAction" class="com.intellij.sdk.webstorm.PopupDialogAction"
