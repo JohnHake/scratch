@@ -20,9 +20,10 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-  version '192.7142.36'
-  type 'IU'
-  plugins 'org.jetbrains.plugins.go:192.6603.23.335'
+//  version '192.7142.36'
+//  type 'IU'
+//  plugins 'org.jetbrains.plugins.go:192.6603.23.335'
+  localPath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/Goland/ch-0/192.7142.48/GoLand.app/Contents'
 }
 
 runIde {
