@@ -22,6 +22,7 @@ intellij {
   version '2019.2.4'
   type 'IU'
   plugins 'JavaScriptLanguage'
+//  localPath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/192.7142.35/WebStorm.app/Contents'
 }
 
 runIde {

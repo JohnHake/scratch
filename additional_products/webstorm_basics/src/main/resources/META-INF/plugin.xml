@@ -4,15 +4,16 @@
   <id>com.intellij.sdk.webstorm</id>
 
   <!-- Text to display as name on Preferences/Settings | Plugin page -->
-  <name>SDK: WebStorm Project Sample</name>
+  <name>SDK: Fresh baked WebStorm Project Sample</name>
 
   <!-- The version of this plugin -->
   <version>0.1.0</version>
 
   <!-- Compatible with the following versions of IntelliJ Platform -->
-  <idea-version since-build="192.4"/>
+  <idea-version since-build="192.2"/>
 
   <depends>JavaScript</depends>
+  <depends>com.intellij.modules.platform</depends>
 
   <!-- Text to display as description on Preferences/Settings | Plugin page  -->
   <description>
@@ -34,8 +35,12 @@
     <group id="com.intellij.sdk.webstorm.GroupedActions" text="SDK: Plugin" popup="true">
       <add-to-group group-id="MainMenu" anchor="last"/>
       <!-- Add a single action to the new group     -->
-      <action id="com.intellij.sdk.webstorm.PopupDialogAction" class="com.intellij.sdk.webstorm.PopupDialogAction"
-              text="Pop a Dialog" description="SDK WebStorm basics example" icon="SdkIcons.Sdk_default_icon">
+      <action id="com.intellij.sdk.webstorm.PopupDialogAction"
+              class="com.intellij.sdk.webstorm.PopupDialogAction"
+              text="Pop a Dialog"
+              description="SDK WebStorm basics example"
+              icon="SdkIcons.Sdk_default_icon" >
+<!--        <add-to-group group-id="ToolsMenu" anchor="first"/>-->
       </action>
     </group>
   </actions>
