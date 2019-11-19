@@ -33,7 +33,7 @@
 
   <actions>
     <!-- Define a new menu group as a last entry in the main menu    -->
-    <group id="org.intellij.sdk.rubymine.NewGroupedActions" text="SDK: Plugin" popup="true">
+    <group id="org.intellij.sdk.rubymine.NewGroupedActions" text="SDK: Plugin">
       <add-to-group group-id="MainMenu" anchor="last"/>
       <!-- Add a single action to the new group     -->
       <action id="com.intellij.sdk.rubymine.PopupDialogAction" class="com.intellij.sdk.rubymine.PopupDialogAction"
