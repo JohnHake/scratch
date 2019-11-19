@@ -15,7 +15,6 @@
   <!-- Requires the MPS module for using the APIs in a plugin -->
   <depends>com.intellij.modules.platform</depends>
 
-
   <!-- Text to display as description on Preferences/Settings | Plugin page  -->
   <description>
     <![CDATA[

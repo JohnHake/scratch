@@ -20,9 +20,15 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-  version '2019.2.3'
+//  version '2019.2.3'
   type 'MPS'
+  version 'LATEST-EAP-SNAPSHOT'
+//  localPath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/MPS/ch-0/192.2321/MPS 2019.2.app/Contents'
 }
+
+//runIde {
+//  ideaDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/MPS/ch-0/192.2321/MPS 2019.2.app/Contents'
+//}
 
 patchPluginXml {
   version = project.version
