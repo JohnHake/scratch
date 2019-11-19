@@ -16,6 +16,7 @@
 
   <!-- Targeting PhpStorm, so is dependent on the PHP plugin -->
   <depends>com.jetbrains.php</depends>
+  <depends>com.intellij.modules.platform</depends>
 
   <!-- Text to display as description on Preferences/Settings | Plugin page  -->
   <description>

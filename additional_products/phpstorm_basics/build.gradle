@@ -24,12 +24,13 @@ intellij {
   type 'IU'               // IU required for compatibility with the php plugin
   // Require the targetIDE plugin or library
   plugins 'com.jetbrains.php:192.6603.42'
+//  localPath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/PhpStorm/ch-0/192.7142.51/PhpStorm.app/Contents'
 }
 
 runIde {
   // Absolute path to installed target application to use as IDE Development Instance
   // Note macOS dialect.
-  ideaDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/PhpStorm/ch-0/192.7142.41/PhpStorm.app/Contents'
+  ideaDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/PhpStorm/ch-0/192.7142.51/PhpStorm.app/Contents'
 }
 
 patchPluginXml {
