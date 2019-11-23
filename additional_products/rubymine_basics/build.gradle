@@ -20,10 +20,10 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-//  version '2019.2.4'
-//  type 'IU'
-//  plugins 'org.jetbrains.plugins.ruby:2019.2.20191029'
-  localPath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/RubyMine/ch-0/192.7142.37/RubyMine.app/Contents'
+  version '192.7142.36'
+  type 'IU'
+  plugins 'org.jetbrains.plugins.ruby:2019.2.20191029'
+//  localPath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/RubyMine/ch-0/192.7142.37/RubyMine.app/Contents'
 }
 
 runIde {
