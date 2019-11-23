@@ -15,7 +15,9 @@
   <idea-version since-build="192.3"/>
 
   <!-- Requires the GO plugin -->
-  <depends>com.intellij.modules.go</depends>
+  <depends>org.jetbrains.plugins.go</depends>
+  <!-- Requires the platform module to distinguish it from a legacy plugin -->
+  <depends>com.intellij.modules.platform</depends>
 
   <!-- Text to display as description on Preferences/Settings | Plugin page  -->
   <description>
