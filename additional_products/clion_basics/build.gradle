@@ -21,8 +21,11 @@ dependencies {
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
   // CLion version compatible with v2019.2.4 IntelliJ Platform
-  version '2019.2.5'
+  version '2019.2.5'        // works
   type 'CL'
+//  version 'CL-2019.2.5'   // works
+// version '192.7142.39'    // cannot find
+  downloadSources false     // required, or subs IC
 }
 
 patchPluginXml {

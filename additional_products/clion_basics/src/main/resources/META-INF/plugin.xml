@@ -13,8 +13,14 @@
   <!-- IntelliJ Platform Version required for Plugin Logo -->
   <idea-version since-build="191.1"/>
 
-  <!-- Requires the CLion module for using the CLion APIs in plugin -->
+  <!-- Required for core CLion functionality -->
+  <depends>com.intellij.modules.clion</depends>
+  <!-- Required for C/C++ language support -->
   <depends>com.intellij.modules.cidr.lang</depends>
+  <!-- Required for native debugger support -->
+  <depends>com.intellij.modules.cidr.debugger</depends>
+  <!--  <depends>com.intellij.modules.clion.ide</depends>-->
+  <!--  <depends>com.intellij.modules.clion.cmake</depends>-->
 
   <!-- Text to display as description on Preferences/Settings | Plugin page  -->
   <description>
@@ -31,14 +37,14 @@
   <!-- Text to display as company information on Preferences/Settings | Plugin page -->
   <vendor url="https://plugins.jetbrains.com">IntelliJ Platform SDK</vendor>
 
-    <actions>
-      <group id="org.intellij.sdk.clion.NewGroupedActions" text="SDK: Plugin" popup="true">
-        <add-to-group group-id="MainMenu" anchor="last"/>
-        <!-- Add a single action to the new group     -->
-        <action id="com.intellij.sdk.clion.PopupDialogAction" class="com.intellij.sdk.clion.PopupDialogAction"
-                text="Pop a Dialog" description="SDK CLion basics example" icon="SdkIcons.Sdk_default_icon">
-        </action>
-      </group>
-    </actions>
+  <actions>
+    <group id="org.intellij.sdk.clion.NewGroupedActions" text="SDK: Plugin" popup="true">
+      <add-to-group group-id="MainMenu" anchor="last"/>
+      <!-- Add a single action to the new group     -->
+      <action id="com.intellij.sdk.clion.PopupDialogAction" class="com.intellij.sdk.clion.PopupDialogAction"
+              text="Pop a Dialog" description="SDK CLion basics example" icon="SdkIcons.Sdk_default_icon">
+      </action>
+    </group>
+  </actions>
 
 </idea-plugin>
