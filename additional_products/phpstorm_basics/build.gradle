@@ -1,6 +1,6 @@
 plugins {
   id 'java'
-  id 'org.jetbrains.intellij' version '0.4.10'
+  id 'org.jetbrains.intellij' version '0.4.13'
 }
 
 group 'com.intellij.sdk'
@@ -24,12 +24,11 @@ intellij {
   type 'IU'               // IU required for compatibility with the php plugin
   // Require the targetIDE plugin or library
   plugins 'com.jetbrains.php:192.6603.42'
-//  localPath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/PhpStorm/ch-0/192.7142.51/PhpStorm.app/Contents'
 }
 
 runIde {
   // Absolute path to installed target application to use as IDE Development Instance
-  // Note macOS dialect.
+  // Note macOS requirement of adding "/Contents" to the path.
   ideaDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/PhpStorm/ch-0/192.7142.51/PhpStorm.app/Contents'
 }
 
