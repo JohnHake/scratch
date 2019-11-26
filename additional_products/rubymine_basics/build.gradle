@@ -2,7 +2,7 @@
 
 plugins {
   id 'java'
-  id 'org.jetbrains.intellij' version '0.4.10'
+  id 'org.jetbrains.intellij' version '0.4.14'
 }
 
 group 'com.intellij.sdk.'
@@ -28,7 +28,7 @@ intellij {
 
 runIde {
   // Absolute path to installed WebStorm application to use as IDE Development Instance
-  ideaDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/RubyMine/ch-0/192.7142.37/RubyMine.app/Contents'
+  ideDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/RubyMine/ch-0/192.7142.37/RubyMine.app/Contents'
 }
 
 patchPluginXml {
