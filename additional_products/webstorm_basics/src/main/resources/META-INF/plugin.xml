@@ -40,7 +40,6 @@
               text="Pop a Dialog"
               description="SDK WebStorm basics example"
               icon="SdkIcons.Sdk_default_icon" >
-<!--        <add-to-group group-id="ToolsMenu" anchor="first"/>-->
       </action>
     </group>
   </actions>
