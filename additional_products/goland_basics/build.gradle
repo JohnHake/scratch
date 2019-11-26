@@ -1,6 +1,6 @@
 plugins {
   id 'java'
-  id 'org.jetbrains.intellij' version '0.4.13'
+  id 'org.jetbrains.intellij' version '0.4.14'
 }
 
 group 'com.intellij.sdk.'
@@ -28,7 +28,7 @@ intellij {
 
 runIde {
   // Absolute path to installed GoLand application to use as IDE Development Instance
-  ideaDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/Goland/ch-0/192.7142.48/GoLand.app/Contents'
+  ideDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/Goland/ch-0/192.7142.48/GoLand.app/Contents'
 }
 
 patchPluginXml {
