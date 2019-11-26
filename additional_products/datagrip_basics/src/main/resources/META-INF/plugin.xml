@@ -16,6 +16,7 @@
 
   <!-- Requires the database plugin to run -->
   <depends>com.intellij.database</depends>
+  <depends>com.intellij.modules.platform</depends>
 
   <!-- Text to display as description on Preferences/Settings | Plugin page  -->
   <description>
