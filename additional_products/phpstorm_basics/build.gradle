@@ -20,16 +20,16 @@ dependencies {
 intellij {
   // Define IntelliJ Platform against which to build the plugin project.
   // Use the IntelliJ Platform BRANCH.BUILD version matching "targetIDE" (PhpStorm)
-  version '192.7142.36'   // baseIntelliJPlatformVersion
+  version '193.5233.102'   // baseIntelliJPlatformVersion
   type 'IU'               // IU required for compatibility with the php plugin
   // Require the targetIDE plugin or library
-  plugins 'com.jetbrains.php:192.7142.51'
+  plugins 'com.jetbrains.php:193.5233.102'
 }
 
 runIde {
   // Absolute path to installed target application to use as IDE Development Instance
   // Note macOS requirement of adding "/Contents" to the path.
-  ideDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/PhpStorm/ch-0/192.7142.51/PhpStorm.app/Contents'
+  ideDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/PhpStorm/ch-0/193.5233.101/PhpStorm.app/Contents'
 }
 
 patchPluginXml {
