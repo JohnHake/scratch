@@ -20,15 +20,15 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-  version '192.7142.36'
+  version '193.5233.102'
   type 'IU'
-  plugins 'org.jetbrains.plugins.go:192.6603.23.335'
+  plugins 'org.jetbrains.plugins.go:193.5233.102.83'
 //  localPath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/Goland/ch-0/192.7142.48/GoLand.app/Contents'
 }
 
 runIde {
   // Absolute path to installed GoLand application to use as IDE Development Instance
-  ideDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/Goland/ch-0/192.7142.48/GoLand.app/Contents'
+  ideDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/Goland/ch-0/193.5233.112/GoLand.app/Contents'
 }
 
 patchPluginXml {
