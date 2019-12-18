@@ -22,6 +22,8 @@ intellij {
   version '2019.3'
   type 'IU'
   plugins 'DatabaseTools'
+//  version '193.5233.102'
+//  localPath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/datagrip/ch-0/193.5233.139/DataGrip.app/Contents'
 }
 
 runIde {
