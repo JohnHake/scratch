@@ -18,17 +18,19 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-  // IntelliJ Platform compatible with DataGrip 2019.3
-  version '2019.3'
-  type 'IU'
-  plugins 'DatabaseTools'
-//  version '193.5233.102'
-//  localPath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/datagrip/ch-0/193.5233.139/DataGrip.app/Contents'
+  // Config #1 - fail
+//  version '2019.3.1'
+//  type 'IU'
+//  plugins 'DatabaseTools'
+
+  // Config #2 - fail
+  localPath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/datagrip/ch-0/193.5662.58/DataGrip.app/Contents'
+  sandboxDirectory = file("/Users/jhake/Library/Caches/DataGrip2019.3/plugins-sandbox")
 }
 
 runIde {
   // Absolute path to installed WebStorm application to use as IDE Development Instance
-  ideDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/datagrip/ch-0/193.5233.139/DataGrip.app/Contents'
+  ideDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/datagrip/ch-0/193.5662.58/DataGrip.app/Contents'
 }
 
 patchPluginXml {
