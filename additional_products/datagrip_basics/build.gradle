@@ -22,15 +22,14 @@ intellij {
   version '2019.3.1'
   type 'IU'
   plugins 'DatabaseTools'
-
-  // Config #2 - fail
-//  localPath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/datagrip/ch-0/193.5662.58/DataGrip.app/Contents'
-//  sandboxDirectory = file("/Users/jhake/Library/Caches/DataGrip2019.3/plugins-sandbox")
 }
 
 runIde {
   // Absolute path to installed WebStorm application to use as IDE Development Instance
   ideDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/datagrip/ch-0/193.5662.58/DataGrip.app/Contents'
+  // Workaround to force the development instance to use the DataGrip platform.
+  // Quiets "java.lang.RuntimeException: Cannot load resource: /idea/0xDBEApplicationInfo.xml"
+  jvmArgs '-Didea.platform.prefix=DataGrip'
 }
 
 patchPluginXml {
