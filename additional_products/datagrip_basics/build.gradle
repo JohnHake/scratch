@@ -19,13 +19,13 @@ dependencies {
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
   // Config #1 - fail
-//  version '2019.3.1'
-//  type 'IU'
-//  plugins 'DatabaseTools'
+  version '2019.3.1'
+  type 'IU'
+  plugins 'DatabaseTools'
 
   // Config #2 - fail
-  localPath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/datagrip/ch-0/193.5662.58/DataGrip.app/Contents'
-  sandboxDirectory = file("/Users/jhake/Library/Caches/DataGrip2019.3/plugins-sandbox")
+//  localPath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/datagrip/ch-0/193.5662.58/DataGrip.app/Contents'
+//  sandboxDirectory = file("/Users/jhake/Library/Caches/DataGrip2019.3/plugins-sandbox")
 }
 
 runIde {
