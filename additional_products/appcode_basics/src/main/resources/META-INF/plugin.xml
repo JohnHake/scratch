@@ -1,0 +1,46 @@
+<!-- Copyright 2000-2019 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. -->
+
+<idea-plugin>
+
+  <!--  Unique id for this plugin. Must stay constant for the life of the plugin.  -->
+  <id>com.intellij.sdk.appcode</id>
+
+  <!-- Text to display as name on Preferences/Settings | Plugin page -->
+  <name>SDK: AppCode Sample Project</name>
+
+  <!-- The version of this plugin -->
+  <version>0.1.0</version>
+
+  <!-- Requires 2019.1 for plugin log support -->
+  <idea-version since-build="191" />
+
+  <!-- Requires the database plugin to run -->
+  <depends>com.intellij.modules.appcode</depends>
+
+  <!-- Text to display as description on Preferences/Settings | Plugin page  -->
+  <description>
+    <![CDATA[
+    Demonstrates how to configure a plugin project for an AppCode plugin.
+    ]]>
+  </description>
+  <change-notes>
+    <![CDATA[
+      <b>0.1.0</b> First release<br>
+    ]]>
+  </change-notes>
+
+  <!-- Text to display as company information on Preferences/Settings | Plugin page -->
+  <vendor url="https://plugins.jetbrains.com">IntelliJ Platform SDK</vendor>
+
+    <actions>
+      <!-- Define a new menu group as a last entry in the main menu    -->
+      <group id="org.intellij.sdk.appcode.NewGroupedActions" text="SDK: Plugin" popup="true">
+        <add-to-group group-id="MainMenu" anchor="last"/>
+        <!-- Add a single action to the new group     -->
+        <action id="com.intellij.sdk.appcode.PopupDialogAction" class="com.intellij.sdk.appcode.PopupDialogAction"
+                text="Pop a Dialog" description="SDK DataGrip basics example" icon="SdkIcons.Sdk_default_icon">
+        </action>
+      </group>
+    </actions>
+
+</idea-plugin>

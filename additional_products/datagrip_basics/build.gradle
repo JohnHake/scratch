@@ -29,6 +29,7 @@ runIde {
   ideDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/datagrip/ch-0/193.5662.58/DataGrip.app/Contents'
   // Workaround to force the development instance to use the DataGrip platform.
   // Quiets "java.lang.RuntimeException: Cannot load resource: /idea/0xDBEApplicationInfo.xml"
+  // Only necessary for gradle-intellij-plugin v0.4.16 and earlier
   jvmArgs '-Didea.platform.prefix=DataGrip'
 }
 

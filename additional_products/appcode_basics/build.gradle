@@ -1,0 +1,33 @@
+plugins {
+  id 'java'
+  id 'org.jetbrains.intellij' version '0.4.14'
+}
+
+group 'com.intellij.sdk'
+version '0.1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+  // Absolute path to installed AppCode application to use as API Platform
+  localPath '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/AppCode/ch-0/193.5662.55/AppCode.app/Contents'
+  updateSinceUntilBuild = false
+}
+
+runIde {
+  // Absolute path to installed WebStorm application to use as IDE Development Instance
+  ideDirectory '/Users/jhake/Library/Application Support/JetBrains/Toolbox/apps/AppCode/ch-0/193.5662.55/AppCode.app/Contents'
+}
+
+patchPluginXml {
+  version = project.version
+}
