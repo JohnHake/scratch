@@ -39,7 +39,7 @@ runIdeForUiTests {
     systemProperty "robot-server.port", "8082"
 }
 ```
-Of course, you can have all in one project. 
+Of course, you can have it all in one project. 
 
 ### Create RemoteRobot
 In the UI test project:
