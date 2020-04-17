@@ -14,7 +14,7 @@ Or, just run all tasks together with one command:
 ## Remote-Robot
 The Remote-Robot library is inspired by Selenium WebDriver. It supports IntelliJ IDEA since version `2018.3`.
 
-![](docs/simple-schema.png)
+![Remote-Robot Schema](docs/simple-schema.png)
 
 It consists of a `remote-robot` client and a `robot-server` plugin:
 * `remote-robot` - is a client (test) side library used to send commands to the `robot-server` plugin. 
@@ -25,13 +25,13 @@ The easiest way to start the test system is to execute the `runIdeForUiTests` ta
 The `remote-robot` library communicates with the `robot-server` plugin via HTTP protocol. This connection means you can launch IDEA on remote machines or in docker containers to check your plugin within different test environments.
 
 ### Setup
-In the test project:
+In the UI test project:
 ```groovy
 dependencies {
     testImplementation("com.intellij.remoterobot:remote-robot:REMOTER-ROBOT_VERSION")
 }
 ```
-In the plugin project:
+In your IntelliJ IDEA plugin project:
 ```groovy
 downloadRobotServerPlugin.version = REMOTER-ROBOT_VERSION
 
@@ -39,12 +39,13 @@ runIdeForUiTests {
     systemProperty "robot-server.port", "8082"
 }
 ```
-Of course, you can have it all in one project. 
+
+Of course, your plugin can also act as the UI test project.  
 
 ### Create RemoteRobot
 In the UI test project:
 ```java
-RemoteRobot remoteRobot = new RemoteRobot("http://127.0.0.1:8082");
+  RemoteRobot remoteRobot = new RemoteRobot("http://127.0.0.1:8082");
 ```
 
 ### Searching Components
@@ -52,7 +53,7 @@ We use the [`XPath`](https://www.w3.org/TR/xpath-21/) query language to find com
 Once IDEA with `robot-server` has started, you can open `http://ROBOT-SERVER:PORT` [link](http://127.0.0.1:8082).
 The page shows the IDEA UI components hierarchy in HTML format. You can find the component of interest and write an XPath to it, similar to Selenium WebDriver.
 There is also a simple XPath generator, which can help write and test your XPaths.
-![](docs/hierarchy.gif)
+![IDEA UI components hierarchy](docs/hierarchy.gif)
 
 For example:
 Define a locator:
@@ -118,10 +119,10 @@ public class ActionLinkFixture extends ComponentFixture {
     }
 }
 ```
-We can retrieve data using `RemoteRobot` with the `callJs` method. In this case there is a `robot` var in the context of JavaScript execution. 
+We can retrieve data using `RemoteRobot` with the `callJs` method. In this case there is a `robot` variable in the context of JavaScript execution. 
 The `robot` is an instance of extending the [`org.assertj.swing.core.Robot`](https://joel-costigliola.github.io/assertj/swing/api/org/assertj/swing/core/Robot.html) class.
 
-If you call the `callJs` method from a `fixture` object, you also have a `component` var in the context, which is the real component you found earlier. See the Searching Components section.
+When you use the `callJs()` method of a `fixture` object, the `component` argument represents the actual UI component that was found (see Searching Components) and used to initialize the `ComponentFixture`.
 
 The `runJs` method works the same way without any return value:
 ```java
