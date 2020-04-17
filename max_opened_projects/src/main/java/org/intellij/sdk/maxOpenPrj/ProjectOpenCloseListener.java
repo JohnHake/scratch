@@ -43,7 +43,9 @@ public class ProjectOpenCloseListener implements ProjectManagerListener {
 
   /**
    * Invoked on project close.
-   *
+   * How do I find out which of several project windows is most visible (on top)? Assume each project is open in a separate window.
+   * Context:
+   * I have an application listener with topic ProjectManagerListener. In my implementation of projectClosed() , I want to show a popup about the project being closed. (But its window is now hidden.) There may be several remaining projects open, each in its own window, and all the project windows are overlapping and visible to some degree. I need to find the (remaining) project window that is on top to display the popup. Workaround: I could display the information in projectClosing(), but it still leaves me with the general question.
    * @param project closing project
    */
   @Override

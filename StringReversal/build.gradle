@@ -95,15 +95,15 @@ intellij {
     // The path to locally installed IDEA distribution that should be used as a dependency. 
     // note the IntelliJ version on this path must match format specified in patchPluginXML.sinceBuild
     // Commented out because intellij.version and intellij.localPath should not be specified at the same time.
-    localPath = '/Applications/apps/IDEA-U/ch-0/191.4738.6/IntelliJ IDEA 2019.1 EAP.app'
+//    localPath = '/Applications/apps/IDEA-U/ch-0/191.4738.6/IntelliJ IDEA 2019.1 EAP.app'
     
     // Patch plugin.xml with since and until build values
     // patchPluginXml.sinceBuild and patchPluginXml.untilBuild will be used (or their default values if none set).
-    updateSinceUntilBuild = 'true'
+//    updateSinceUntilBuild = 'true'
 
     // The user-defined value from patchPluginXml.sinceBuild 
     // (or its default value) will be used as a since, and an "open" until value.
-    sameSinceUntilBuild = 'false'
+    sameSinceUntilBuild = 'true'
     
     // Do not download sources while initializing Gradle build
     downloadSources = 'false'

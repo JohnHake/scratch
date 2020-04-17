@@ -1,0 +1,240 @@
+Index: code_samples/conditional_operator_intention/settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- code_samples/conditional_operator_intention/settings.gradle	(revision c9f85671682c1a1f0d238fb920df6969fbfa7eea)
++++ code_samples/conditional_operator_intention/settings.gradle	(date 1585344571508)
+@@ -1,4 +1,4 @@
+ // Copyright 2000-2020 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ 
+-rootProject.name = 'conditional_operator_intention'
++rootProject.name = 'intention'
+ 
+Index: code_samples/comparing_references_inspection/settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- code_samples/comparing_references_inspection/settings.gradle	(revision c9f85671682c1a1f0d238fb920df6969fbfa7eea)
++++ code_samples/comparing_references_inspection/settings.gradle	(date 1585344556671)
+@@ -1,4 +1,4 @@
+ // Copyright 2000-2020 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ 
+-rootProject.name = 'comparing_references_inspection'
++rootProject.name = 'codeInspection'
+ 
+Index: code_samples/module/settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- code_samples/module/settings.gradle	(revision c9f85671682c1a1f0d238fb920df6969fbfa7eea)
++++ code_samples/module/settings.gradle	(date 1585344882938)
+@@ -1,4 +1,4 @@
+ // Copyright 2000-2020 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ 
+-rootProject.name = 'module'
++rootProject.name = 'moduleType'
+ 
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/compiler.xml	(revision c9f85671682c1a1f0d238fb920df6969fbfa7eea)
++++ .idea/compiler.xml	(date 1585594987934)
+@@ -3,67 +3,5 @@
+   <component name="CompilerConfiguration">
+     <addNotNullAssertions enabled="false" />
+     <wildcardResourcePatterns />
+-    <bytecodeTargetLevel>
+-      <module name="action" target="1.8" />
+-      <module name="action.main" target="1.8" />
+-      <module name="action.test" target="1.8" />
+-      <module name="comparing_references_inspection" target="1.8" />
+-      <module name="comparing_references_inspection.main" target="1.8" />
+-      <module name="comparing_references_inspection.test" target="1.8" />
+-      <module name="conditional_operator_intention" target="1.8" />
+-      <module name="conditional_operator_intention.main" target="1.8" />
+-      <module name="conditional_operator_intention.test" target="1.8" />
+-      <module name="editor" target="1.8" />
+-      <module name="editor.main" target="1.8" />
+-      <module name="editor.test" target="1.8" />
+-      <module name="facet" target="1.8" />
+-      <module name="facet.main" target="1.8" />
+-      <module name="facet.test" target="1.8" />
+-      <module name="framework" target="1.8" />
+-      <module name="framework.main" target="1.8" />
+-      <module name="framework.test" target="1.8" />
+-      <module name="inspection" target="1.8" />
+-      <module name="inspection.main" target="1.8" />
+-      <module name="inspection.test" target="1.8" />
+-      <module name="kotlin" target="1.8" />
+-      <module name="kotlin.main" target="1.8" />
+-      <module name="kotlin.test" target="1.8" />
+-      <module name="live_templates" target="1.8" />
+-      <module name="live_templates.main" target="1.8" />
+-      <module name="live_templates.test" target="1.8" />
+-      <module name="maxOpenProjects" target="1.8" />
+-      <module name="module" target="1.8" />
+-      <module name="module.main" target="1.8" />
+-      <module name="module.test" target="1.8" />
+-      <module name="org.intellij.sdk.maxOpenProjects.main" target="1.8" />
+-      <module name="org.intellij.sdk.maxOpenProjects.test" target="1.8" />
+-      <module name="project_model" target="1.8" />
+-      <module name="project_model.main" target="1.8" />
+-      <module name="project_model.test" target="1.8" />
+-      <module name="project_view_pane" target="1.8" />
+-      <module name="project_view_pane.main" target="1.8" />
+-      <module name="project_view_pane.test" target="1.8" />
+-      <module name="projectWizard" target="1.8" />
+-      <module name="projectWizard.main" target="1.8" />
+-      <module name="projectWizard.test" target="1.8" />
+-      <module name="psi" target="1.8" />
+-      <module name="psi.main" target="1.8" />
+-      <module name="psi.test" target="1.8" />
+-      <module name="pycharm" target="1.8" />
+-      <module name="pycharm.main" target="1.8" />
+-      <module name="pycharm.test" target="1.8" />
+-      <module name="runConfiguration" target="1.8" />
+-      <module name="runConfiguration.main" target="1.8" />
+-      <module name="runConfiguration.test" target="1.8" />
+-      <module name="simple_language_plugin" target="1.8" />
+-      <module name="simple_language_plugin.main" target="1.8" />
+-      <module name="simple_language_plugin.test" target="1.8" />
+-      <module name="toolWindow" target="1.8" />
+-      <module name="toolWindow.main" target="1.8" />
+-      <module name="toolWindow.test" target="1.8" />
+-      <module name="treeStructureProvider" target="1.8" />
+-      <module name="treeStructureProvider.main" target="1.8" />
+-      <module name="treeStructureProvider.test" target="1.8" />
+-    </bytecodeTargetLevel>
+   </component>
+ </project>
+\ No newline at end of file
+Index: code_samples/live_templates/settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- code_samples/live_templates/settings.gradle	(revision c9f85671682c1a1f0d238fb920df6969fbfa7eea)
++++ code_samples/live_templates/settings.gradle	(date 1585344604966)
+@@ -1,4 +1,4 @@
+ // Copyright 2000-2020 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ 
+-rootProject.name = 'live_templates'
++rootProject.name = 'liveTemplates'
+ 
+Index: code_samples/project_view_pane/settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- code_samples/project_view_pane/settings.gradle	(revision c9f85671682c1a1f0d238fb920df6969fbfa7eea)
++++ code_samples/project_view_pane/settings.gradle	(date 1585344709110)
+@@ -1,4 +1,4 @@
+ // Copyright 2000-2020 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ 
+-rootProject.name = 'project_view_pane'
++rootProject.name = 'view.pane'
+ 
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision c9f85671682c1a1f0d238fb920df6969fbfa7eea)
++++ .idea/gradle.xml	(date 1585594244744)
+@@ -12,12 +12,12 @@
+                   <project path="$PROJECT_DIR$/code_samples/action_basics" />
+                 </projects>
+               </build>
+-              <build path="$PROJECT_DIR$/code_samples/comparing_references_inspection" name="comparing_references_inspection">
++              <build path="$PROJECT_DIR$/code_samples/comparing_references_inspection" name="codeInspection">
+                 <projects>
+                   <project path="$PROJECT_DIR$/code_samples/comparing_references_inspection" />
+                 </projects>
+               </build>
+-              <build path="$PROJECT_DIR$/code_samples/conditional_operator_intention" name="conditional_operator_intention">
++              <build path="$PROJECT_DIR$/code_samples/conditional_operator_intention" name="intention">
+                 <projects>
+                   <project path="$PROJECT_DIR$/code_samples/conditional_operator_intention" />
+                 </projects>
+@@ -47,7 +47,7 @@
+                   <project path="$PROJECT_DIR$/code_samples/kotlin_demo" />
+                 </projects>
+               </build>
+-              <build path="$PROJECT_DIR$/code_samples/live_templates" name="live_templates">
++              <build path="$PROJECT_DIR$/code_samples/live_templates" name="liveTemplates">
+                 <projects>
+                   <project path="$PROJECT_DIR$/code_samples/live_templates" />
+                 </projects>
+@@ -57,7 +57,7 @@
+                   <project path="$PROJECT_DIR$/code_samples/max_opened_projects" />
+                 </projects>
+               </build>
+-              <build path="$PROJECT_DIR$/code_samples/module" name="module">
++              <build path="$PROJECT_DIR$/code_samples/module" name="moduleType">
+                 <projects>
+                   <project path="$PROJECT_DIR$/code_samples/module" />
+                 </projects>
+@@ -67,12 +67,12 @@
+                   <project path="$PROJECT_DIR$/code_samples/product_specific/pycharm_basics" />
+                 </projects>
+               </build>
+-              <build path="$PROJECT_DIR$/code_samples/project_model" name="project_model">
++              <build path="$PROJECT_DIR$/code_samples/project_model" name="project.model">
+                 <projects>
+                   <project path="$PROJECT_DIR$/code_samples/project_model" />
+                 </projects>
+               </build>
+-              <build path="$PROJECT_DIR$/code_samples/project_view_pane" name="project_view_pane">
++              <build path="$PROJECT_DIR$/code_samples/project_view_pane" name="view.pane">
+                 <projects>
+                   <project path="$PROJECT_DIR$/code_samples/project_view_pane" />
+                 </projects>
+@@ -92,7 +92,7 @@
+                   <project path="$PROJECT_DIR$/code_samples/run_configuration" />
+                 </projects>
+               </build>
+-              <build path="$PROJECT_DIR$/code_samples/simple_language_plugin" name="simple_language_plugin">
++              <build path="$PROJECT_DIR$/code_samples/simple_language_plugin" name="language">
+                 <projects>
+                   <project path="$PROJECT_DIR$/code_samples/simple_language_plugin" />
+                 </projects>
+@@ -139,7 +139,7 @@
+             <option value="$PROJECT_DIR$/code_samples/tree_structure_provider" />
+           </set>
+         </option>
+-        <option name="useQualifiedModuleNames" value="true" />
++        <option name="useQualifiedModuleNames" value="false" />
+       </GradleProjectSettings>
+     </option>
+   </component>
+Index: code_samples/project_model/settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- code_samples/project_model/settings.gradle	(revision c9f85671682c1a1f0d238fb920df6969fbfa7eea)
++++ code_samples/project_model/settings.gradle	(date 1585344709107)
+@@ -1,4 +1,4 @@
+ // Copyright 2000-2020 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ 
+-rootProject.name = 'project_model'
++rootProject.name = 'project.model'
+ 
+Index: code_samples/simple_language_plugin/settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- code_samples/simple_language_plugin/settings.gradle	(revision c9f85671682c1a1f0d238fb920df6969fbfa7eea)
++++ code_samples/simple_language_plugin/settings.gradle	(date 1585344709113)
+@@ -1,4 +1,4 @@
+ // Copyright 2000-2020 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ 
+-rootProject.name = 'simple_language_plugin'
++rootProject.name = 'language'
+ 

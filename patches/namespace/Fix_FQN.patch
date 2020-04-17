@@ -1,0 +1,91 @@
+Index: code_samples/conditional_operator_intention/settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- code_samples/conditional_operator_intention/settings.gradle	(revision c9f85671682c1a1f0d238fb920df6969fbfa7eea)
++++ code_samples/conditional_operator_intention/settings.gradle	(date 1585344571508)
+@@ -1,4 +1,4 @@
+ // Copyright 2000-2020 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ 
+-rootProject.name = 'conditional_operator_intention'
++rootProject.name = 'intention'
+ 
+Index: code_samples/comparing_references_inspection/settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- code_samples/comparing_references_inspection/settings.gradle	(revision c9f85671682c1a1f0d238fb920df6969fbfa7eea)
++++ code_samples/comparing_references_inspection/settings.gradle	(date 1585344556671)
+@@ -1,4 +1,4 @@
+ // Copyright 2000-2020 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ 
+-rootProject.name = 'comparing_references_inspection'
++rootProject.name = 'codeInspection'
+ 
+Index: code_samples/module/settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- code_samples/module/settings.gradle	(revision c9f85671682c1a1f0d238fb920df6969fbfa7eea)
++++ code_samples/module/settings.gradle	(date 1585344882938)
+@@ -1,4 +1,4 @@
+ // Copyright 2000-2020 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ 
+-rootProject.name = 'module'
++rootProject.name = 'moduleType'
+ 
+Index: code_samples/live_templates/settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- code_samples/live_templates/settings.gradle	(revision c9f85671682c1a1f0d238fb920df6969fbfa7eea)
++++ code_samples/live_templates/settings.gradle	(date 1585344604966)
+@@ -1,4 +1,4 @@
+ // Copyright 2000-2020 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ 
+-rootProject.name = 'live_templates'
++rootProject.name = 'liveTemplates'
+ 
+Index: code_samples/project_view_pane/settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- code_samples/project_view_pane/settings.gradle	(revision c9f85671682c1a1f0d238fb920df6969fbfa7eea)
++++ code_samples/project_view_pane/settings.gradle	(date 1585344709110)
+@@ -1,4 +1,4 @@
+ // Copyright 2000-2020 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ 
+-rootProject.name = 'project_view_pane'
++rootProject.name = 'view.pane'
+ 
+Index: code_samples/project_model/settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- code_samples/project_model/settings.gradle	(revision c9f85671682c1a1f0d238fb920df6969fbfa7eea)
++++ code_samples/project_model/settings.gradle	(date 1585344709107)
+@@ -1,4 +1,4 @@
+ // Copyright 2000-2020 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ 
+-rootProject.name = 'project_model'
++rootProject.name = 'project.model'
+ 
+Index: code_samples/simple_language_plugin/settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- code_samples/simple_language_plugin/settings.gradle	(revision c9f85671682c1a1f0d238fb920df6969fbfa7eea)
++++ code_samples/simple_language_plugin/settings.gradle	(date 1585344709113)
+@@ -1,4 +1,4 @@
+ // Copyright 2000-2020 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ 
+-rootProject.name = 'simple_language_plugin'
++rootProject.name = 'language'
+ 
